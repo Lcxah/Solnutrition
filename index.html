@@ -262,6 +262,16 @@ footer{padding:32px 40px;border-top:0.5px solid rgba(250,238,218,0.08);display:f
       <div class="ing-name"><span class="en-inline">Raw honey</span><span class="fr-inline">Miel brut</span></div>
       <div class="ing-role"><span class="en-inline">Natural sweetener</span><span class="fr-inline">Édulcorant naturel</span></div>
     </div>
+    <div class="ing-card" onclick="showIng(6)">
+      <div class="ing-icon">🌿</div>
+      <div class="ing-name"><span class="en-inline">Chia seeds</span><span class="fr-inline">Graines de chia</span></div>
+      <div class="ing-role"><span class="en-inline">Omega-3 + fibre</span><span class="fr-inline">Oméga-3 + fibres</span></div>
+    </div>
+    <div class="ing-card" onclick="showIng(7)">
+      <div class="ing-icon">🟢</div>
+      <div class="ing-name"><span class="en-inline">Chlorella</span><span class="fr-inline">Chlorelle</span></div>
+      <div class="ing-role"><span class="en-inline">Detox + cellular repair</span><span class="fr-inline">Détox + réparation cellulaire</span></div>
+    </div>
   </div>
   <div class="ing-detail">
     <h3 id="ing-title"></h3>
@@ -446,7 +456,9 @@ const ings = {
     {t:'Medjool dates',p:'Nature\'s binder and sweetener in one. Medjool dates hold the bar together without glycerin, tapioca syrup, or any processed binder. They bring natural sugar, fibre, potassium, and magnesium — no processing required.'},
     {t:'Raw cacao',p:'Not cocoa powder — raw cacao. Cold-pressed from the cacao bean, retaining all the flavanols, magnesium, and antioxidants that processing destroys. The deepest, most honest chocolate flavour possible.'},
     {t:'Almond butter',p:'A source of monounsaturated fats, vitamin E, and magnesium. Almond butter gives Sol its texture and satiety. Healthy fat that keeps you full. No added oils, no emulsifiers. Just ground almonds.'},
-    {t:'Raw honey',p:'Antimicrobial, rich in enzymes and trace minerals, and naturally sweet without the blood sugar spike of refined sugar. A touch of raw honey rounds the flavour without artificial sweeteners or sugar alcohols.'}
+    {t:'Raw honey',p:'Antimicrobial, rich in enzymes and trace minerals, and naturally sweet without the blood sugar spike of refined sugar. A touch of raw honey rounds the flavour without artificial sweeteners or sugar alcohols.'},
+  {t:'Chia seeds',p:'A dense source of omega-3 fatty acids, fibre, and plant-based calcium. Chia seeds add texture and moisture retention to the bar, keeping it from drying out. They also slow sugar absorption — no energy crash.'},
+  {t:'Chlorella',p:'The most chlorophyll-rich food on earth. Chlorella supports detoxification, binds to heavy metals, and contains a unique growth factor (CGF) that supports cellular repair. Paired with spirulina it creates an elite green superfood stack found in no other protein bar in Canada. Always sourced as broken cell wall chlorella for maximum bioavailability.'}
   ],
   fr:[
     {t:'Protéine de chanvre',p:'Une protéine végétale complète avec tous les acides aminés essentiels. Le chanvre est plus facile à digérer que le lactosérum, contient des acides gras oméga-3 et oméga-6, et ne cause aucun problème digestif. Il constitue l\'essentiel des 17g de protéines par barre — propre, naturel, cultivé au Canada.'},
@@ -454,7 +466,9 @@ const ings = {
     {t:'Dattes Medjool',p:'Le liant et l\'édulcorant naturel en un. Les dattes Medjool tiennent la barre ensemble sans glycérine, sirop de tapioca, ou tout autre liant transformé. Elles apportent du sucre naturel, des fibres, du potassium et du magnésium — sans transformation.'},
     {t:'Cacao cru',p:'Pas de la poudre de cacao — du cacao cru. Pressé à froid à partir de la fève de cacao, conservant tous les flavanols, le magnésium et les antioxydants que la transformation détruit. La saveur chocolatée la plus profonde et la plus honnête possible.'},
     {t:'Beurre d\'amande',p:'Une source de graisses monoinsaturées, de vitamine E et de magnésium. Le beurre d\'amande donne à Sol sa texture et sa satiété. Une bonne graisse qui vous rassasie. Sans huiles ajoutées, sans émulsifiants. Juste des amandes moulues.'},
-    {t:'Miel brut',p:'Antimicrobien, riche en enzymes et en minéraux, et naturellement sucré sans le pic de glycémie du sucre raffiné. Une touche de miel brut arrondit la saveur sans édulcorants artificiels ni alcools de sucre.'}
+    {t:'Miel brut',p:'Antimicrobien, riche en enzymes et en minéraux, et naturellement sucré sans le pic de glycémie du sucre raffiné. Une touche de miel brut arrondit la saveur sans édulcorants artificiels ni alcools de sucre.'},
+  {t:'Graines de chia',p:'Une source dense d\'acides gras oméga-3, de fibres et de calcium végétal. Les graines de chia ajoutent de la texture et retiennent l\'humidité dans la barre. Elles ralentissent également l\'absorption du sucre — pas de chute d\'énergie.'},
+  {t:'Chlorelle',p:'L\'aliment le plus riche en chlorophylle au monde. La chlorelle soutient la détoxification, se lie aux métaux lourds et contient un facteur de croissance unique (CGF) qui favorise la réparation cellulaire. Associée à la spiruline, elle crée une combinaison superaliment verte d\'élite. Toujours sourcée en chlorelle à paroi cellulaire brisée pour une biodisponibilité maximale.'}
   ]
 };
 
