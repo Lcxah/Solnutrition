@@ -11,13 +11,13 @@
 *{box-sizing:border-box;margin:0;padding:0;}
 html{scroll-behavior:smooth;}
 body{font-family:'DM Sans',sans-serif;background:#1e1c1a;color:#FAEEDA;min-height:100vh;}
- 
+
 /* LANG */
 .en{display:block;}.fr{display:none;}
 .ei{display:inline;}.fi{display:none;}
 body.fr .en{display:none;}body.fr .fr{display:block;}
 body.fr .ei{display:none;}body.fr .fi{display:inline;}
- 
+
 /* NAV */
 nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:16px 32px;display:flex;align-items:center;justify-content:space-between;background:rgba(30,28,26,0.95);backdrop-filter:blur(12px);border-bottom:0.5px solid rgba(250,238,218,0.08);}
 .logo{display:flex;align-items:center;gap:10px;text-decoration:none;}
@@ -31,10 +31,10 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:16px 32px;display:fl
 .lang-btn.active{background:#BA7517;color:#FAEEDA;}
 .preorder-nav-btn{background:#BA7517;border:none;border-radius:8px;padding:9px 20px;color:#FAEEDA;font-family:'DM Sans',sans-serif;font-size:12px;font-weight:500;cursor:pointer;text-decoration:none;transition:background 0.2s;}
 .preorder-nav-btn:hover{background:#EF9F27;}
- 
+
 /* HERO — split layout */
 .hero{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;padding-top:60px;}
- 
+
 /* LEFT — brand story */
 .hero-left{padding:64px 48px 64px 64px;display:flex;flex-direction:column;justify-content:center;border-right:0.5px solid rgba(250,238,218,0.08);}
 .eyebrow{font-size:10px;letter-spacing:0.22em;color:#BA7517;text-transform:uppercase;margin-bottom:20px;}
@@ -44,12 +44,12 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:16px 32px;display:fl
 .badges{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:40px;}
 .badge{font-size:11px;padding:5px 14px;border-radius:20px;background:rgba(250,238,218,0.05);border:0.5px solid rgba(250,238,218,0.12);color:rgba(250,238,218,0.6);}
 .badge.green{border-color:rgba(29,158,117,0.4);color:#5DCAA5;background:rgba(29,158,117,0.08);}
- 
+
 /* Ingredient strip */
 .ing-strip{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:40px;}
 .ing-tag{font-size:11px;color:rgba(250,238,218,0.4);display:flex;align-items:center;gap:5px;}
 .ing-tag::before{content:"·";color:#BA7517;}
- 
+
 /* Bar visual */
 .bar-visual{background:linear-gradient(135deg,#1a1208,#2C2C2A);border-radius:16px;padding:28px 24px;border:0.5px solid rgba(186,117,23,0.25);margin-bottom:32px;display:flex;align-items:center;gap:20px;}
 .bar-icon{width:64px;height:64px;background:#633806;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:28px;flex-shrink:0;}
@@ -60,13 +60,13 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:16px 32px;display:fl
 .macro{text-align:center;}
 .macro-val{font-family:'Playfair Display',serif;font-size:20px;color:#EF9F27;font-weight:700;line-height:1;}
 .macro-label{font-size:9px;color:rgba(250,238,218,0.35);letter-spacing:0.08em;text-transform:uppercase;}
- 
+
 /* RIGHT — pre-order */
 .hero-right{padding:64px 64px 64px 48px;display:flex;flex-direction:column;justify-content:center;background:rgba(0,0,0,0.15);}
 .preorder-label{font-size:10px;letter-spacing:0.2em;color:#BA7517;text-transform:uppercase;margin-bottom:20px;}
 .preorder-h2{font-family:'Playfair Display',serif;font-size:28px;color:#FAEEDA;margin-bottom:6px;}
 .preorder-sub{font-size:13px;color:rgba(250,238,218,0.4);margin-bottom:28px;line-height:1.6;}
- 
+
 /* Product cards */
 .product-cards{display:flex;flex-direction:column;gap:10px;margin-bottom:24px;}
 .product-card{border-radius:12px;padding:18px 20px;cursor:pointer;transition:all 0.2s;border:1.5px solid;display:flex;align-items:center;justify-content:space-between;gap:12px;text-decoration:none;}
@@ -83,29 +83,29 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:16px 32px;display:fl
 .card-price{font-family:'Playfair Display',serif;font-size:24px;color:#EF9F27;font-weight:700;line-height:1;}
 .card-per{font-size:10px;color:rgba(250,238,218,0.35);margin-top:2px;}
 .card-arrow{font-size:16px;color:#BA7517;margin-top:4px;}
- 
+
 /* Trust row */
 .trust-row{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:20px;}
 .trust-item{background:rgba(250,238,218,0.03);border:0.5px solid rgba(250,238,218,0.08);border-radius:8px;padding:10px 12px;text-align:center;}
 .trust-icon{font-size:16px;margin-bottom:4px;}
 .trust-text{font-size:10px;color:rgba(250,238,218,0.4);line-height:1.4;}
- 
+
 /* Urgency */
 .urgency{background:rgba(186,117,23,0.06);border:0.5px solid rgba(186,117,23,0.2);border-radius:10px;padding:14px 16px;}
 .urgency-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;}
 .urgency-label{font-size:11px;color:rgba(250,238,218,0.45);}
 .urgency-count{font-size:12px;color:#EF9F27;font-weight:500;}
 .urgency-bar-bg{background:rgba(250,238,218,0.06);border-radius:20px;height:5px;overflow:hidden;margin-bottom:6px;}
-.urgency-bar-fill{background:linear-gradient(90deg,#BA7517,#EF9F27);height:100%;width:23%;border-radius:20px;}
+.urgency-bar-fill{background:linear-gradient(90deg,#BA7517,#EF9F27);height:100%;width:77%;border-radius:20px;}
 .urgency-note{font-size:10px;color:rgba(250,238,218,0.3);}
- 
+
 /* BOTTOM SECTIONS */
 .section{padding:80px 64px;max-width:1100px;margin:0 auto;}
 .section-sm{padding:64px 64px;border-top:0.5px solid rgba(250,238,218,0.06);}
 .sec-label{font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:#BA7517;margin-bottom:20px;}
 .sec-h2{font-family:'Playfair Display',serif;font-size:32px;color:#FAEEDA;margin-bottom:8px;}
 .sec-sub{font-size:14px;color:rgba(250,238,218,0.45);line-height:1.7;margin-bottom:32px;}
- 
+
 /* Ingredients grid */
 .ing-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;}
 .ing-card{background:rgba(250,238,218,0.03);border:0.5px solid rgba(250,238,218,0.08);border-radius:10px;padding:16px 14px;cursor:pointer;transition:all 0.2s;}
@@ -116,7 +116,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:16px 32px;display:fl
 .ing-detail{background:rgba(186,117,23,0.06);border:0.5px solid rgba(186,117,23,0.18);border-radius:10px;padding:18px 20px;margin-top:12px;}
 .ing-detail h3{font-family:'Playfair Display',serif;font-size:16px;color:#EF9F27;margin-bottom:6px;}
 .ing-detail p{font-size:13px;color:rgba(250,238,218,0.6);line-height:1.7;}
- 
+
 /* VS section */
 .vs-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
 .vs-card{border-radius:12px;padding:22px 20px;}
@@ -129,19 +129,19 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:16px 32px;display:fl
 .vs-us .vs-item{color:rgba(250,238,218,0.8);}
 .xi{color:#E24B4A;font-style:normal;}
 .ci{color:#1D9E75;font-style:normal;}
- 
+
 /* Story */
 .story-block{max-width:600px;}
 .story-quote{font-family:'Playfair Display',serif;font-size:24px;color:#FAEEDA;line-height:1.35;margin-bottom:20px;}
 .story-quote em{color:#EF9F27;font-style:italic;}
 .story-p{font-size:14px;color:rgba(250,238,218,0.5);line-height:1.8;margin-bottom:12px;}
- 
+
 /* Social */
 .social-row{display:flex;gap:12px;}
 .social-btn{display:flex;align-items:center;gap:10px;padding:13px 22px;border-radius:10px;text-decoration:none;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:500;color:#FAEEDA;background:rgba(250,238,218,0.04);border:0.5px solid rgba(250,238,218,0.12);transition:all 0.2s;}
 .social-btn:hover{border-color:#BA7517;background:rgba(186,117,23,0.08);}
 .sicon{width:18px;height:18px;}
- 
+
 /* Footer */
 footer{padding:28px 64px;border-top:0.5px solid rgba(250,238,218,0.06);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;}
 .footer-logo{font-family:'Playfair Display',serif;font-size:16px;color:#FAEEDA;letter-spacing:4px;}
@@ -149,14 +149,14 @@ footer{padding:28px 64px;border-top:0.5px solid rgba(250,238,218,0.06);display:f
 .footer-links{display:flex;gap:20px;}
 .footer-link{font-size:11px;color:#BA7517;text-decoration:none;}
 .footer-link:hover{color:#EF9F27;}
- 
+
 /* Macros section */
 .macro-row{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;}
 .macro-card{background:rgba(250,238,218,0.03);border:0.5px solid rgba(250,238,218,0.08);border-radius:10px;padding:20px 12px;text-align:center;}
 .macro-big{font-family:'Playfair Display',serif;font-size:36px;color:#EF9F27;font-weight:700;line-height:1;}
 .macro-unit{font-size:11px;color:#BA7517;margin-bottom:4px;}
 .macro-lbl{font-size:11px;color:rgba(250,238,218,0.35);margin-top:6px;}
- 
+
 /* Preorder bottom CTA */
 .bottom-cta{background:linear-gradient(135deg,rgba(99,56,6,0.4),rgba(44,44,42,0.8));border:0.5px solid rgba(186,117,23,0.3);border-radius:16px;padding:48px;text-align:center;margin:0 64px 80px;}
 .bottom-cta h2{font-family:'Playfair Display',serif;font-size:32px;color:#FAEEDA;margin-bottom:8px;}
@@ -166,7 +166,7 @@ footer{padding:28px 64px;border-top:0.5px solid rgba(250,238,218,0.06);display:f
 .cta-btn-primary:hover{background:#EF9F27;}
 .cta-btn-secondary{display:inline-block;background:rgba(186,117,23,0.15);border:0.5px solid #BA7517;border-radius:8px;padding:15px 32px;color:#EF9F27;font-family:'DM Sans',sans-serif;font-size:14px;font-weight:500;text-decoration:none;transition:all 0.2s;}
 .cta-btn-secondary:hover{background:rgba(186,117,23,0.25);}
- 
+
 @media(max-width:768px){
   .hero{grid-template-columns:1fr;min-height:auto;}
   .hero-left{padding:80px 24px 40px;border-right:none;border-bottom:0.5px solid rgba(250,238,218,0.08);}
@@ -186,7 +186,7 @@ footer{padding:28px 64px;border-top:0.5px solid rgba(250,238,218,0.06);display:f
 </style>
 </head>
 <body>
- 
+
 <nav>
   <a class="logo" href="#">
     <svg width="32" height="32" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
@@ -210,16 +210,16 @@ footer{padding:28px 64px;border-top:0.5px solid rgba(250,238,218,0.06);display:f
     <a href="#preorder" class="preorder-nav-btn"><span class="ei">Pre-order now</span><span class="fi">Précommander</span></a>
   </div>
 </nav>
- 
+
 <!-- HERO — SPLIT -->
 <div class="hero">
- 
+
   <!-- LEFT — Brand -->
   <div class="hero-left">
     <p class="eyebrow"><span class="ei">Montreal · Clean fuel · No compromise</span><span class="fi">Montréal · Carburant propre · Sans compromis</span></p>
     <h1 class="hero-h1"><span class="ei">Fuel the <em>real</em> you.</span><span class="fi">Nourris le <em>vrai</em> toi.</span></h1>
     <p class="hero-sub"><span class="ei">Most protein bars are engineered for shelf life. Sol is built for yours. Whole food ingredients, clean nutrition, no compromises.</span><span class="fi">La plupart des barres sont conçues pour durer sur les tablettes. Sol est conçue pour vous durer. Ingrédients entiers, nutrition propre, aucun compromis.</span></p>
- 
+
     <div class="badges">
       <span class="badge green">✓ <span class="ei">No seed oils</span><span class="fi">Sans huiles de graine</span></span>
       <span class="badge green">✓ <span class="ei">No whey</span><span class="fi">Sans lactosérum</span></span>
@@ -227,7 +227,7 @@ footer{padding:28px 64px;border-top:0.5px solid rgba(250,238,218,0.06);display:f
       <span class="badge">18g <span class="ei">protein</span><span class="fi">protéines</span></span>
       <span class="badge">8 <span class="ei">ingredients</span><span class="fi">ingrédients</span></span>
     </div>
- 
+
     <div class="bar-visual">
       <div class="bar-icon">🍫</div>
       <div class="bar-info">
@@ -241,7 +241,7 @@ footer{padding:28px 64px;border-top:0.5px solid rgba(250,238,218,0.06);display:f
         </div>
       </div>
     </div>
- 
+
     <div class="ing-strip">
       <span class="ing-tag">Hemp protein</span>
       <span class="ing-tag">Spirulina</span>
@@ -253,15 +253,15 @@ footer{padding:28px 64px;border-top:0.5px solid rgba(250,238,218,0.06);display:f
       <span class="ing-tag">Chlorella</span>
     </div>
   </div>
- 
+
   <!-- RIGHT — Pre-order -->
   <div class="hero-right" id="preorder">
     <p class="preorder-label"><span class="ei">Pre-order — Limited to 100</span><span class="fi">Précommande — Limité à 100</span></p>
     <h2 class="preorder-h2"><span class="ei">Be first. Get 10% off.</span><span class="fi">Soyez premier. 10% de rabais.</span></h2>
     <p class="preorder-sub"><span class="ei">Sol launches in 60 days. Pre-order now, pay securely via Stripe, ship when ready.</span><span class="fi">Sol lance dans 60 jours. Précommandez maintenant, payez via Stripe, expédition dès que prêt.</span></p>
- 
+
     <div class="product-cards">
- 
+
       <a href="https://buy.stripe.com/dRm9AU7y96JV0YOaZkcQU01" target="_blank" class="product-card single">
         <div class="card-left">
           <div class="card-emoji">🍫</div>
@@ -276,7 +276,7 @@ footer{padding:28px 64px;border-top:0.5px solid rgba(250,238,218,0.06);display:f
           <div class="card-arrow">→</div>
         </div>
       </a>
- 
+
       <a href="https://buy.stripe.com/bJe00kbOpc4fbDs8RccQU00" target="_blank" class="product-card box">
         <div class="best-badge">⭐ <span class="ei">BEST VALUE</span><span class="fi">MEILLEUR PRIX</span></div>
         <div class="card-left">
@@ -292,9 +292,9 @@ footer{padding:28px 64px;border-top:0.5px solid rgba(250,238,218,0.06);display:f
           <div class="card-arrow">→</div>
         </div>
       </a>
- 
+
     </div>
- 
+
     <div class="trust-row">
       <div class="trust-item">
         <div class="trust-icon">🔒</div>
@@ -309,7 +309,27 @@ footer{padding:28px 64px;border-top:0.5px solid rgba(250,238,218,0.06);display:f
         <div class="trust-text"><span class="ei">Made in Montreal</span><span class="fi">Fait à Montréal</span></div>
       </div>
     </div>
- 
+
+    <!-- EMAIL WAITLIST FORM -->
+    <div style="margin-bottom:16px;">
+      <p style="font-size:10px;letter-spacing:0.15em;text-transform:uppercase;color:rgba(250,238,218,0.35);margin-bottom:10px;">
+        <span class="ei">Not ready to order? Join the waitlist</span>
+        <span class="fi">Pas prêt à commander? Rejoignez la liste</span>
+      </p>
+      <form id="waitlist-form" action="https://formspree.io/f/xpqezbrz" method="POST" style="display:flex;gap:8px;">
+        <input type="email" name="email" required placeholder="your@email.com" style="flex:1;background:rgba(250,238,218,0.06);border:0.5px solid rgba(250,238,218,0.15);border-radius:8px;padding:11px 14px;color:#FAEEDA;font-family:'DM Sans',sans-serif;font-size:13px;outline:none;transition:border-color 0.2s;" onfocus="this.style.borderColor='#BA7517'" onblur="this.style.borderColor='rgba(250,238,218,0.15)'"/>
+        <input type="hidden" name="_subject" value="New Sol Nutrition Waitlist Signup"/>
+        <button type="submit" style="background:rgba(186,117,23,0.2);border:0.5px solid #BA7517;border-radius:8px;padding:11px 18px;color:#EF9F27;font-family:'DM Sans',sans-serif;font-size:12px;font-weight:500;cursor:pointer;white-space:nowrap;transition:all 0.2s;" onmouseover="this.style.background='rgba(186,117,23,0.35)'" onmouseout="this.style.background='rgba(186,117,23,0.2)'">
+          <span class="ei">Notify me →</span>
+          <span class="fi">Me notifier →</span>
+        </button>
+      </form>
+      <div id="waitlist-success" style="display:none;background:rgba(29,158,117,0.1);border:0.5px solid #1D9E75;border-radius:8px;padding:10px 14px;color:#5DCAA5;font-size:12px;margin-top:8px;">
+        <span class="ei">🌱 You're on the list. We'll email you when Sol launches.</span>
+        <span class="fi">🌱 Vous êtes sur la liste. On vous contacte au lancement.</span>
+      </div>
+    </div>
+
     <div class="urgency">
       <div class="urgency-top">
         <span class="urgency-label"><span class="ei">Pre-order spots remaining</span><span class="fi">Places restantes</span></span>
@@ -320,7 +340,7 @@ footer{padding:28px 64px;border-top:0.5px solid rgba(250,238,218,0.06);display:f
     </div>
   </div>
 </div>
- 
+
 <!-- INGREDIENTS -->
 <div id="ingredients" class="section-sm">
   <div style="max-width:1000px;margin:0 auto;">
@@ -341,7 +361,7 @@ footer{padding:28px 64px;border-top:0.5px solid rgba(250,238,218,0.06);display:f
     </div>
   </div>
 </div>
- 
+
 <!-- MACROS -->
 <div class="section-sm">
   <div style="max-width:1000px;margin:0 auto;">
@@ -354,7 +374,7 @@ footer{padding:28px 64px;border-top:0.5px solid rgba(250,238,218,0.06);display:f
     </div>
   </div>
 </div>
- 
+
 <!-- VS -->
 <div class="section-sm">
   <div style="max-width:1000px;margin:0 auto;">
@@ -365,7 +385,7 @@ footer{padding:28px 64px;border-top:0.5px solid rgba(250,238,218,0.06);display:f
         <div class="vs-item"><i class="xi">✕</i><span class="ei">Sucralose or erythritol</span><span class="fi">Sucralose ou érythritol</span></div>
         <div class="vs-item"><i class="xi">✕</i><span class="ei">Sunflower or canola oil</span><span class="fi">Huile de tournesol ou canola</span></div>
         <div class="vs-item"><i class="xi">✕</i><span class="ei">Whey or soy isolate</span><span class="fi">Lactosérum ou soja isolé</span></div>
-        <div class="vs-item"><i class="xi">✕</i><span class="ei">"Natural flavours" — anything</span><span class="fi">"Arômes naturels" — n'importe quoi</span></div>
+        <div class="vs-item"><i class="xi">✕</i><span class="ei">"Natural flavours" — legally means anything from beaver glands to petrochemicals</span><span class="fi">"Arômes naturels" — peut légalement désigner n'importe quoi, même des glandes de castor ou des pétrochimiques</span></div>
         <div class="vs-item"><i class="xi">✕</i><span class="ei">20+ ingredient list</span><span class="fi">20+ ingrédients</span></div>
       </div>
       <div class="vs-card vs-us">
@@ -379,7 +399,7 @@ footer{padding:28px 64px;border-top:0.5px solid rgba(250,238,218,0.06);display:f
     </div>
   </div>
 </div>
- 
+
 <!-- STORY -->
 <div id="story" class="section-sm">
   <div style="max-width:1000px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;">
@@ -414,7 +434,7 @@ footer{padding:28px 64px;border-top:0.5px solid rgba(250,238,218,0.06);display:f
     </div>
   </div>
 </div>
- 
+
 <!-- BOTTOM CTA -->
 <div class="bottom-cta">
   <h2><span class="ei">Ready to pre-order?</span><span class="fi">Prêt à précommander?</span></h2>
@@ -428,7 +448,7 @@ footer{padding:28px 64px;border-top:0.5px solid rgba(250,238,218,0.06);display:f
     </a>
   </div>
 </div>
- 
+
 <footer>
   <span class="footer-logo">SOL</span>
   <span class="footer-copy"><span class="ei">Made in Montreal, Quebec · solnutrition.ca</span><span class="fi">Fait à Montréal, Québec · solnutrition.ca</span></span>
@@ -438,7 +458,7 @@ footer{padding:28px 64px;border-top:0.5px solid rgba(250,238,218,0.06);display:f
     <a href="mailto:hello@solnutrition.ca" class="footer-link"><span class="ei">Contact</span><span class="fi">Contact</span></a>
   </div>
 </footer>
- 
+
 <script>
 // LANGUAGE
 let currentLang = 'en';
@@ -453,7 +473,29 @@ function setLang(lang) {
 const saved = localStorage.getItem('sol-lang');
 const browserFr = navigator.language && navigator.language.toLowerCase().startsWith('fr');
 if(saved === 'fr' || (!saved && browserFr)) setLang('fr');
- 
+
+// WAITLIST FORM
+const wForm = document.getElementById('waitlist-form');
+if(wForm) {
+  wForm.addEventListener('submit', async function(e) {
+    e.preventDefault();
+    const data = new FormData(wForm);
+    try {
+      const res = await fetch(wForm.action, {
+        method: 'POST',
+        body: data,
+        headers: { 'Accept': 'application/json' }
+      });
+      if(res.ok) {
+        wForm.style.display = 'none';
+        document.getElementById('waitlist-success').style.display = 'block';
+      }
+    } catch(err) {
+      console.error('Form error:', err);
+    }
+  });
+}
+
 // INGREDIENTS
 let currentIng = 0;
 const ings = {
@@ -489,4 +531,3 @@ showIng(0);
 </script>
 </body>
 </html>
- 
