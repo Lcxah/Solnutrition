@@ -3,520 +3,490 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Sol Nutrition — Fuel the real you / Nourris le vrai toi</title>
-<meta name="description" content="A clean protein bar built from whole food ingredients. No seed oils. No whey. No sweeteners. Made in Montreal."/>
+<title>Sol Nutrition — Pre-order Now</title>
+<meta name="description" content="Clean protein bar. 8 whole food ingredients. No seed oils. No whey. Made in Montreal. Pre-order now."/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
 <style>
 *{box-sizing:border-box;margin:0;padding:0;}
 html{scroll-behavior:smooth;}
-body{font-family:'DM Sans',sans-serif;background:#2C2C2A;color:#FAEEDA;}
-
-/* LANG ELEMENTS */
+body{font-family:'DM Sans',sans-serif;background:#1e1c1a;color:#FAEEDA;min-height:100vh;}
+ 
+/* LANG */
 .en{display:block;}.fr{display:none;}
-.en-inline{display:inline;}.fr-inline{display:none;}
-body.fr-mode .en{display:none;}
-body.fr-mode .fr{display:block;}
-body.fr-mode .en-inline{display:none;}
-body.fr-mode .fr-inline{display:inline;}
-
+.ei{display:inline;}.fi{display:none;}
+body.fr .en{display:none;}body.fr .fr{display:block;}
+body.fr .ei{display:none;}body.fr .fi{display:inline;}
+ 
 /* NAV */
-nav{display:flex;align-items:center;justify-content:space-between;padding:20px 40px;border-bottom:0.5px solid rgba(250,238,218,0.1);position:sticky;top:0;background:#2C2C2A;z-index:100;flex-wrap:wrap;gap:10px;}
-.nav-left{display:flex;align-items:center;gap:12px;text-decoration:none;}
-.nav-logo-text{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;color:#FAEEDA;letter-spacing:4px;}
-.nav-sub{font-size:9px;font-weight:300;color:#EF9F27;letter-spacing:3px;display:block;margin-top:-3px;}
-.nav-right{display:flex;align-items:center;gap:10px;}
-.lang-toggle{display:flex;background:rgba(250,238,218,0.08);border-radius:20px;padding:3px;border:0.5px solid rgba(250,238,218,0.15);}
-.lang-btn{padding:5px 14px;border-radius:16px;font-size:12px;font-weight:500;cursor:pointer;border:none;background:transparent;color:rgba(250,238,218,0.5);font-family:'DM Sans',sans-serif;transition:all 0.2s;}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:16px 32px;display:flex;align-items:center;justify-content:space-between;background:rgba(30,28,26,0.95);backdrop-filter:blur(12px);border-bottom:0.5px solid rgba(250,238,218,0.08);}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;}
+.logo-text{font-family:'Playfair Display',serif;font-size:20px;font-weight:700;color:#FAEEDA;letter-spacing:4px;}
+.logo-sub{font-size:8px;color:#BA7517;letter-spacing:3px;display:block;margin-top:-2px;}
+.nav-links{display:flex;align-items:center;gap:24px;}
+.nav-link{font-size:12px;color:rgba(250,238,218,0.5);text-decoration:none;transition:color 0.2s;letter-spacing:0.05em;}
+.nav-link:hover{color:#EF9F27;}
+.lang-toggle{display:flex;background:rgba(250,238,218,0.06);border-radius:20px;padding:3px;border:0.5px solid rgba(250,238,218,0.1);}
+.lang-btn{padding:4px 12px;border-radius:16px;font-size:11px;font-weight:500;cursor:pointer;border:none;background:transparent;color:rgba(250,238,218,0.4);font-family:'DM Sans',sans-serif;transition:all 0.2s;}
 .lang-btn.active{background:#BA7517;color:#FAEEDA;}
-.nav-btn{background:#BA7517;border:none;border-radius:8px;padding:10px 22px;color:#FAEEDA;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:500;cursor:pointer;transition:background 0.2s;text-decoration:none;display:inline-block;}
-.nav-btn:hover{background:#EF9F27;}
-
-/* HERO */
-.hero{padding:80px 40px 64px;text-align:center;max-width:700px;margin:0 auto;}
-.eyebrow{font-size:11px;letter-spacing:0.22em;color:#BA7517;text-transform:uppercase;margin-bottom:24px;}
-.hero h1{font-family:'Playfair Display',serif;font-size:60px;font-weight:700;line-height:1.05;margin-bottom:16px;}
-.hero h1 em{font-style:italic;color:#EF9F27;}
-.hero-sub{font-size:16px;font-weight:300;color:rgba(250,238,218,0.6);line-height:1.75;margin-bottom:36px;}
-.badges{display:flex;justify-content:center;flex-wrap:wrap;gap:8px;margin-bottom:40px;}
-.badge{background:rgba(250,238,218,0.06);border:0.5px solid rgba(250,238,218,0.14);color:rgba(250,238,218,0.65);font-size:11px;padding:6px 16px;border-radius:20px;font-weight:300;}
-
-/* WAITLIST */
-.waitlist-wrap{max-width:460px;margin:0 auto;}
-.waitlist-form{display:flex;gap:8px;margin-bottom:10px;}
-.waitlist-form input{flex:1;background:rgba(250,238,218,0.07);border:0.5px solid rgba(250,238,218,0.18);border-radius:8px;padding:14px 18px;color:#FAEEDA;font-family:'DM Sans',sans-serif;font-size:14px;outline:none;transition:border-color 0.2s;}
-.waitlist-form input::placeholder{color:rgba(250,238,218,0.3);}
-.waitlist-form input:focus{border-color:#BA7517;}
-.waitlist-btn{background:#BA7517;border:none;border-radius:8px;padding:14px 24px;color:#FAEEDA;font-family:'DM Sans',sans-serif;font-size:14px;font-weight:500;cursor:pointer;white-space:nowrap;transition:background 0.2s;}
-.waitlist-btn:hover{background:#EF9F27;}
-.waitlist-hint{font-size:11px;color:rgba(250,238,218,0.3);text-align:center;}
-.success{display:none;background:rgba(29,158,117,0.12);border:0.5px solid #1D9E75;border-radius:8px;padding:14px 20px;color:#5DCAA5;font-size:14px;text-align:center;}
-
-/* DIVIDER */
-.divider{height:0.5px;background:rgba(250,238,218,0.08);margin:0 40px;}
-
-/* SECTIONS */
-.section{padding:64px 40px;max-width:900px;margin:0 auto;}
-.sec-label{font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:#BA7517;margin-bottom:24px;font-weight:400;}
-
-/* INGREDIENTS */
-.ing-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px;margin-bottom:20px;}
-.ing-card{background:rgba(250,238,218,0.04);border:0.5px solid rgba(250,238,218,0.1);border-radius:10px;padding:18px 14px;cursor:pointer;transition:border-color 0.2s,background 0.2s;}
-.ing-card:hover,.ing-card.active{border-color:#BA7517;background:rgba(186,117,23,0.1);}
-.ing-icon{font-size:24px;margin-bottom:10px;}
-.ing-name{font-size:13px;font-weight:500;color:#FAEEDA;margin-bottom:3px;}
-.ing-role{font-size:11px;color:#BA7517;font-weight:300;}
-.ing-detail{background:rgba(186,117,23,0.07);border:0.5px solid rgba(186,117,23,0.2);border-radius:10px;padding:20px 22px;margin-top:4px;}
-.ing-detail h3{font-family:'Playfair Display',serif;font-size:18px;color:#EF9F27;margin-bottom:8px;}
-.ing-detail p{font-size:14px;color:rgba(250,238,218,0.65);line-height:1.75;}
-
-/* MACROS */
-.macro-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;}
-.macro-card{background:rgba(250,238,218,0.04);border:0.5px solid rgba(250,238,218,0.1);border-radius:10px;padding:20px 12px;text-align:center;}
-.macro-unit{font-size:11px;color:#BA7517;margin-bottom:2px;}
-.macro-val{font-family:'Playfair Display',serif;font-size:36px;font-weight:700;color:#EF9F27;line-height:1;}
-.macro-label{font-size:12px;color:rgba(250,238,218,0.4);margin-top:6px;font-weight:300;}
-
-/* VS */
+.preorder-nav-btn{background:#BA7517;border:none;border-radius:8px;padding:9px 20px;color:#FAEEDA;font-family:'DM Sans',sans-serif;font-size:12px;font-weight:500;cursor:pointer;text-decoration:none;transition:background 0.2s;}
+.preorder-nav-btn:hover{background:#EF9F27;}
+ 
+/* HERO — split layout */
+.hero{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;padding-top:60px;}
+ 
+/* LEFT — brand story */
+.hero-left{padding:64px 48px 64px 64px;display:flex;flex-direction:column;justify-content:center;border-right:0.5px solid rgba(250,238,218,0.08);}
+.eyebrow{font-size:10px;letter-spacing:0.22em;color:#BA7517;text-transform:uppercase;margin-bottom:20px;}
+.hero-h1{font-family:'Playfair Display',serif;font-size:52px;font-weight:700;line-height:1.05;margin-bottom:16px;}
+.hero-h1 em{font-style:italic;color:#EF9F27;}
+.hero-sub{font-size:14px;color:rgba(250,238,218,0.55);line-height:1.75;margin-bottom:32px;max-width:380px;}
+.badges{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:40px;}
+.badge{font-size:11px;padding:5px 14px;border-radius:20px;background:rgba(250,238,218,0.05);border:0.5px solid rgba(250,238,218,0.12);color:rgba(250,238,218,0.6);}
+.badge.green{border-color:rgba(29,158,117,0.4);color:#5DCAA5;background:rgba(29,158,117,0.08);}
+ 
+/* Ingredient strip */
+.ing-strip{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:40px;}
+.ing-tag{font-size:11px;color:rgba(250,238,218,0.4);display:flex;align-items:center;gap:5px;}
+.ing-tag::before{content:"·";color:#BA7517;}
+ 
+/* Bar visual */
+.bar-visual{background:linear-gradient(135deg,#1a1208,#2C2C2A);border-radius:16px;padding:28px 24px;border:0.5px solid rgba(186,117,23,0.25);margin-bottom:32px;display:flex;align-items:center;gap:20px;}
+.bar-icon{width:64px;height:64px;background:#633806;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:28px;flex-shrink:0;}
+.bar-info{}
+.bar-name{font-family:'Playfair Display',serif;font-size:18px;color:#FAEEDA;margin-bottom:4px;}
+.bar-flavour{font-size:12px;color:#BA7517;margin-bottom:8px;font-style:italic;}
+.bar-macros{display:flex;gap:14px;}
+.macro{text-align:center;}
+.macro-val{font-family:'Playfair Display',serif;font-size:20px;color:#EF9F27;font-weight:700;line-height:1;}
+.macro-label{font-size:9px;color:rgba(250,238,218,0.35);letter-spacing:0.08em;text-transform:uppercase;}
+ 
+/* RIGHT — pre-order */
+.hero-right{padding:64px 64px 64px 48px;display:flex;flex-direction:column;justify-content:center;background:rgba(0,0,0,0.15);}
+.preorder-label{font-size:10px;letter-spacing:0.2em;color:#BA7517;text-transform:uppercase;margin-bottom:20px;}
+.preorder-h2{font-family:'Playfair Display',serif;font-size:28px;color:#FAEEDA;margin-bottom:6px;}
+.preorder-sub{font-size:13px;color:rgba(250,238,218,0.4);margin-bottom:28px;line-height:1.6;}
+ 
+/* Product cards */
+.product-cards{display:flex;flex-direction:column;gap:10px;margin-bottom:24px;}
+.product-card{border-radius:12px;padding:18px 20px;cursor:pointer;transition:all 0.2s;border:1.5px solid;display:flex;align-items:center;justify-content:space-between;gap:12px;text-decoration:none;}
+.product-card.single{background:rgba(250,238,218,0.03);border-color:rgba(250,238,218,0.12);}
+.product-card.single:hover{border-color:#BA7517;background:rgba(186,117,23,0.05);}
+.product-card.box{background:rgba(186,117,23,0.08);border-color:#BA7517;position:relative;}
+.product-card.box:hover{background:rgba(186,117,23,0.14);border-color:#EF9F27;}
+.best-badge{position:absolute;top:-10px;right:16px;background:#EF9F27;color:#2C2C2A;font-size:9px;font-weight:700;padding:3px 10px;border-radius:20px;font-family:'DM Sans',sans-serif;letter-spacing:0.05em;}
+.card-left{display:flex;align-items:center;gap:14px;}
+.card-emoji{font-size:24px;}
+.card-name{font-size:14px;font-weight:500;color:#FAEEDA;margin-bottom:2px;}
+.card-desc{font-size:11px;color:rgba(250,238,218,0.4);}
+.card-right{text-align:right;flex-shrink:0;}
+.card-price{font-family:'Playfair Display',serif;font-size:24px;color:#EF9F27;font-weight:700;line-height:1;}
+.card-per{font-size:10px;color:rgba(250,238,218,0.35);margin-top:2px;}
+.card-arrow{font-size:16px;color:#BA7517;margin-top:4px;}
+ 
+/* Trust row */
+.trust-row{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:20px;}
+.trust-item{background:rgba(250,238,218,0.03);border:0.5px solid rgba(250,238,218,0.08);border-radius:8px;padding:10px 12px;text-align:center;}
+.trust-icon{font-size:16px;margin-bottom:4px;}
+.trust-text{font-size:10px;color:rgba(250,238,218,0.4);line-height:1.4;}
+ 
+/* Urgency */
+.urgency{background:rgba(186,117,23,0.06);border:0.5px solid rgba(186,117,23,0.2);border-radius:10px;padding:14px 16px;}
+.urgency-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;}
+.urgency-label{font-size:11px;color:rgba(250,238,218,0.45);}
+.urgency-count{font-size:12px;color:#EF9F27;font-weight:500;}
+.urgency-bar-bg{background:rgba(250,238,218,0.06);border-radius:20px;height:5px;overflow:hidden;margin-bottom:6px;}
+.urgency-bar-fill{background:linear-gradient(90deg,#BA7517,#EF9F27);height:100%;width:23%;border-radius:20px;}
+.urgency-note{font-size:10px;color:rgba(250,238,218,0.3);}
+ 
+/* BOTTOM SECTIONS */
+.section{padding:80px 64px;max-width:1100px;margin:0 auto;}
+.section-sm{padding:64px 64px;border-top:0.5px solid rgba(250,238,218,0.06);}
+.sec-label{font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:#BA7517;margin-bottom:20px;}
+.sec-h2{font-family:'Playfair Display',serif;font-size:32px;color:#FAEEDA;margin-bottom:8px;}
+.sec-sub{font-size:14px;color:rgba(250,238,218,0.45);line-height:1.7;margin-bottom:32px;}
+ 
+/* Ingredients grid */
+.ing-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;}
+.ing-card{background:rgba(250,238,218,0.03);border:0.5px solid rgba(250,238,218,0.08);border-radius:10px;padding:16px 14px;cursor:pointer;transition:all 0.2s;}
+.ing-card:hover,.ing-card.active{border-color:#BA7517;background:rgba(186,117,23,0.08);}
+.ing-icon{font-size:20px;margin-bottom:8px;}
+.ing-name{font-size:12px;font-weight:500;color:#FAEEDA;margin-bottom:2px;}
+.ing-role{font-size:10px;color:#BA7517;}
+.ing-detail{background:rgba(186,117,23,0.06);border:0.5px solid rgba(186,117,23,0.18);border-radius:10px;padding:18px 20px;margin-top:12px;}
+.ing-detail h3{font-family:'Playfair Display',serif;font-size:16px;color:#EF9F27;margin-bottom:6px;}
+.ing-detail p{font-size:13px;color:rgba(250,238,218,0.6);line-height:1.7;}
+ 
+/* VS section */
 .vs-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
-.vs-card{border-radius:12px;padding:24px 20px;}
-.vs-them{background:rgba(250,238,218,0.03);border:0.5px solid rgba(250,238,218,0.08);}
-.vs-us{background:rgba(186,117,23,0.08);border:0.5px solid rgba(186,117,23,0.3);}
-.vs-head{font-size:10px;letter-spacing:0.14em;text-transform:uppercase;margin-bottom:16px;}
-.vs-them .vs-head{color:rgba(250,238,218,0.25);}
+.vs-card{border-radius:12px;padding:22px 20px;}
+.vs-them{background:rgba(250,238,218,0.02);border:0.5px solid rgba(250,238,218,0.07);}
+.vs-us{background:rgba(186,117,23,0.07);border:0.5px solid rgba(186,117,23,0.25);}
+.vs-head{font-size:10px;letter-spacing:0.12em;text-transform:uppercase;margin-bottom:14px;}
+.vs-them .vs-head{color:rgba(250,238,218,0.2);}
 .vs-us .vs-head{color:#EF9F27;}
-.vs-item{display:flex;align-items:flex-start;gap:10px;margin-bottom:10px;font-size:13px;line-height:1.5;}
-.vs-them .vs-item{color:rgba(250,238,218,0.35);}
-.vs-us .vs-item{color:rgba(250,238,218,0.85);}
-.xi{color:#E24B4A;flex-shrink:0;font-style:normal;}
-.ci{color:#1D9E75;flex-shrink:0;font-style:normal;}
-
-/* FLAVOURS */
-.flavour-section{padding:64px 40px;text-align:center;max-width:700px;margin:0 auto;}
-.flavour-section h2{font-family:'Playfair Display',serif;font-size:36px;color:#FAEEDA;margin-bottom:10px;}
-.flavour-section p{font-size:14px;color:rgba(250,238,218,0.45);font-weight:300;line-height:1.7;margin-bottom:32px;}
-.flavour-pills{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-bottom:28px;}
-.fl-pill{padding:10px 24px;border-radius:20px;font-size:13px;font-weight:500;cursor:pointer;transition:all 0.2s;border:0.5px solid;font-family:'DM Sans',sans-serif;}
-.fl-1{background:rgba(99,56,6,0.2);border-color:#633806;color:#EF9F27;}
-.fl-1.sel,.fl-1:hover{background:#633806;border-color:#BA7517;}
-.fl-2{background:rgba(186,117,23,0.1);border-color:#854F0B;color:#EF9F27;}
-.fl-2.sel,.fl-2:hover{background:#854F0B;border-color:#EF9F27;}
-.fl-3{background:rgba(8,80,65,0.15);border-color:#085041;color:#5DCAA5;}
-.fl-3.sel,.fl-3:hover{background:#085041;border-color:#1D9E75;}
-.fl-detail{background:rgba(250,238,218,0.04);border:0.5px solid rgba(250,238,218,0.1);border-radius:12px;padding:24px 28px;max-width:420px;margin:0 auto 32px;}
-.fl-detail h3{font-family:'Playfair Display',serif;font-size:20px;color:#EF9F27;margin-bottom:8px;}
-.fl-detail p{font-size:13px;color:rgba(250,238,218,0.55);line-height:1.7;}
-
-/* STORY */
-.story-section{padding:64px 40px;max-width:700px;margin:0 auto;}
-.story-section blockquote{font-family:'Playfair Display',serif;font-size:26px;font-weight:700;color:#FAEEDA;line-height:1.35;margin-bottom:20px;}
-.story-section blockquote em{color:#EF9F27;font-style:italic;}
-.story-section p{font-size:14px;color:rgba(250,238,218,0.55);line-height:1.8;margin-bottom:14px;}
-
-/* SOCIAL */
-.social-section{padding:48px 40px;text-align:center;max-width:500px;margin:0 auto;}
-.social-section h2{font-family:'Playfair Display',serif;font-size:28px;color:#FAEEDA;margin-bottom:8px;}
-.social-section p{font-size:14px;color:rgba(250,238,218,0.45);margin-bottom:28px;font-weight:300;}
-.social-btns{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;}
-.social-btn{display:flex;align-items:center;gap:10px;padding:14px 24px;border-radius:10px;text-decoration:none;font-family:'DM Sans',sans-serif;font-size:14px;font-weight:500;transition:all 0.2s;border:0.5px solid;color:#FAEEDA;background:rgba(250,238,218,0.05);border-color:rgba(250,238,218,0.15);}
-.social-btn:hover{background:rgba(250,238,218,0.1);border-color:#FAEEDA;}
-.social-icon{width:22px;height:22px;flex-shrink:0;}
-
-/* FOOTER */
-footer{padding:32px 40px;border-top:0.5px solid rgba(250,238,218,0.08);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;}
-.footer-logo{font-family:'Playfair Display',serif;font-size:18px;color:#FAEEDA;letter-spacing:4px;}
-.footer-copy{font-size:11px;color:rgba(250,238,218,0.25);font-weight:300;}
+.vs-item{display:flex;align-items:center;gap:10px;margin-bottom:8px;font-size:12px;color:rgba(250,238,218,0.35);}
+.vs-us .vs-item{color:rgba(250,238,218,0.8);}
+.xi{color:#E24B4A;font-style:normal;}
+.ci{color:#1D9E75;font-style:normal;}
+ 
+/* Story */
+.story-block{max-width:600px;}
+.story-quote{font-family:'Playfair Display',serif;font-size:24px;color:#FAEEDA;line-height:1.35;margin-bottom:20px;}
+.story-quote em{color:#EF9F27;font-style:italic;}
+.story-p{font-size:14px;color:rgba(250,238,218,0.5);line-height:1.8;margin-bottom:12px;}
+ 
+/* Social */
+.social-row{display:flex;gap:12px;}
+.social-btn{display:flex;align-items:center;gap:10px;padding:13px 22px;border-radius:10px;text-decoration:none;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:500;color:#FAEEDA;background:rgba(250,238,218,0.04);border:0.5px solid rgba(250,238,218,0.12);transition:all 0.2s;}
+.social-btn:hover{border-color:#BA7517;background:rgba(186,117,23,0.08);}
+.sicon{width:18px;height:18px;}
+ 
+/* Footer */
+footer{padding:28px 64px;border-top:0.5px solid rgba(250,238,218,0.06);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;}
+.footer-logo{font-family:'Playfair Display',serif;font-size:16px;color:#FAEEDA;letter-spacing:4px;}
+.footer-copy{font-size:11px;color:rgba(250,238,218,0.2);}
 .footer-links{display:flex;gap:20px;}
-.footer-links a{font-size:12px;color:#BA7517;text-decoration:none;font-weight:300;transition:color 0.2s;}
-.footer-links a:hover{color:#EF9F27;}
-.logo-svg{display:block;margin:0 auto 36px;}
-
-@media(max-width:600px){
-  .hero h1{font-size:38px;}
-  .macro-grid{grid-template-columns:repeat(2,1fr);}
+.footer-link{font-size:11px;color:#BA7517;text-decoration:none;}
+.footer-link:hover{color:#EF9F27;}
+ 
+/* Macros section */
+.macro-row{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;}
+.macro-card{background:rgba(250,238,218,0.03);border:0.5px solid rgba(250,238,218,0.08);border-radius:10px;padding:20px 12px;text-align:center;}
+.macro-big{font-family:'Playfair Display',serif;font-size:36px;color:#EF9F27;font-weight:700;line-height:1;}
+.macro-unit{font-size:11px;color:#BA7517;margin-bottom:4px;}
+.macro-lbl{font-size:11px;color:rgba(250,238,218,0.35);margin-top:6px;}
+ 
+/* Preorder bottom CTA */
+.bottom-cta{background:linear-gradient(135deg,rgba(99,56,6,0.4),rgba(44,44,42,0.8));border:0.5px solid rgba(186,117,23,0.3);border-radius:16px;padding:48px;text-align:center;margin:0 64px 80px;}
+.bottom-cta h2{font-family:'Playfair Display',serif;font-size:32px;color:#FAEEDA;margin-bottom:8px;}
+.bottom-cta p{font-size:14px;color:rgba(250,238,218,0.5);margin-bottom:32px;}
+.cta-btns{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;}
+.cta-btn-primary{display:inline-block;background:#BA7517;border-radius:8px;padding:15px 32px;color:#FAEEDA;font-family:'DM Sans',sans-serif;font-size:14px;font-weight:500;text-decoration:none;transition:background 0.2s;}
+.cta-btn-primary:hover{background:#EF9F27;}
+.cta-btn-secondary{display:inline-block;background:rgba(186,117,23,0.15);border:0.5px solid #BA7517;border-radius:8px;padding:15px 32px;color:#EF9F27;font-family:'DM Sans',sans-serif;font-size:14px;font-weight:500;text-decoration:none;transition:all 0.2s;}
+.cta-btn-secondary:hover{background:rgba(186,117,23,0.25);}
+ 
+@media(max-width:768px){
+  .hero{grid-template-columns:1fr;min-height:auto;}
+  .hero-left{padding:80px 24px 40px;border-right:none;border-bottom:0.5px solid rgba(250,238,218,0.08);}
+  .hero-right{padding:40px 24px 60px;}
+  .hero-h1{font-size:38px;}
+  .section,.section-sm{padding:48px 24px;}
+  .ing-grid{grid-template-columns:repeat(2,1fr);}
   .vs-grid{grid-template-columns:1fr;}
-  nav{padding:16px 20px;}
-  .section,.story-section,.flavour-section,.social-section{padding:48px 20px;}
-  .divider{margin:0 20px;}
-  footer{padding:24px 20px;flex-direction:column;text-align:center;}
-  .waitlist-form{flex-direction:column;}
-  .social-btns{flex-direction:column;align-items:center;}
-  .nav-right{gap:8px;}
-  .nav-btn{padding:8px 14px;font-size:12px;}
+  .macro-row{grid-template-columns:repeat(2,1fr);}
+  .bottom-cta{margin:0 24px 60px;padding:32px 24px;}
+  footer{padding:24px;}
+  .nav-links{gap:12px;}
+  .nav-link{display:none;}
+  .trust-row{grid-template-columns:1fr;}
+  .social-row{flex-direction:column;}
 }
 </style>
 </head>
 <body>
-
+ 
 <nav>
-  <a class="nav-left" href="#">
-    <svg width="36" height="36" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <a class="logo" href="#">
+    <svg width="32" height="32" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
       <circle cx="32" cy="32" r="28" fill="none" stroke="#BA7517" stroke-width="2"/>
-      <circle cx="32" cy="32" r="20" fill="#2C2C2A"/>
+      <circle cx="32" cy="32" r="20" fill="#1e1c1a"/>
       <path d="M32 16 Q44 16 44 32 Q44 48 32 48 Q22 48 20 38 Q18 28 26 22 Q31 18 34 26 Q37 32 32 36 Q28 38 26 34" fill="none" stroke="#EF9F27" stroke-width="2.2" stroke-linecap="round"/>
     </svg>
     <div>
-      <span class="nav-logo-text">SOL</span>
-      <span class="nav-sub">NUTRITION</span>
+      <span class="logo-text">SOL</span>
+      <span class="logo-sub">NUTRITION</span>
     </div>
   </a>
-  <div class="nav-right">
+  <div class="nav-links">
+    <a href="#ingredients" class="nav-link"><span class="ei">Ingredients</span><span class="fi">Ingrédients</span></a>
+    <a href="#story" class="nav-link"><span class="ei">Story</span><span class="fi">Histoire</span></a>
+    <a href="#preorder" class="nav-link"><span class="ei">Pre-order</span><span class="fi">Précommande</span></a>
     <div class="lang-toggle">
       <button class="lang-btn active" id="btn-en" onclick="setLang('en')">EN</button>
       <button class="lang-btn" id="btn-fr" onclick="setLang('fr')">FR</button>
     </div>
-    <a href="#waitlist" class="nav-btn">
-      <span class="en-inline">Join the waitlist</span>
-      <span class="fr-inline">Rejoindre la liste</span>
-    </a>
+    <a href="#preorder" class="preorder-nav-btn"><span class="ei">Pre-order now</span><span class="fi">Précommander</span></a>
   </div>
 </nav>
-
-<!-- HERO -->
+ 
+<!-- HERO — SPLIT -->
 <div class="hero">
-  <svg class="logo-svg" width="80" height="80" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
-    <circle cx="32" cy="32" r="28" fill="none" stroke="#BA7517" stroke-width="1.5"/>
-    <circle cx="32" cy="32" r="20" fill="#2C2C2A"/>
-    <path d="M32 16 Q44 16 44 32 Q44 48 32 48 Q22 48 20 38 Q18 28 26 22 Q31 18 34 26 Q37 32 32 36 Q28 38 26 34" fill="none" stroke="#EF9F27" stroke-width="2" stroke-linecap="round"/>
-  </svg>
-
-  <p class="eyebrow">
-    <span class="en-inline">Montreal · Clean fuel · No compromise</span>
-    <span class="fr-inline">Montréal · Carburant propre · Sans compromis</span>
-  </p>
-
-  <h1>
-    <span class="en-inline">Fuel the <em>real</em> you.</span>
-    <span class="fr-inline">Nourris le <em>vrai</em> toi.</span>
-  </h1>
-
-  <p class="hero-sub">
-    <span class="en-inline">Most protein bars are engineered for shelf life. Sol is built for yours. Whole food ingredients, clean nutrition, no compromises.</span>
-    <span class="fr-inline">La plupart des barres protéinées sont conçues pour durer sur les tablettes. Sol est conçue pour vous durer. Ingrédients entiers, nutrition propre, aucun compromis.</span>
-  </p>
-
-  <div class="badges">
-    <span class="badge"><span class="en-inline">No seed oils</span><span class="fr-inline">Sans huiles de graine</span></span>
-    <span class="badge"><span class="en-inline">No whey</span><span class="fr-inline">Sans lactosérum</span></span>
-    <span class="badge"><span class="en-inline">No artificial sweeteners</span><span class="fr-inline">Sans édulcorants artificiels</span></span>
-    <span class="badge">17g <span class="en-inline">protein</span><span class="fr-inline">protéines</span></span>
-    <span class="badge">8 <span class="en-inline">real ingredients</span><span class="fr-inline">vrais ingrédients</span></span>
-    <span class="badge"><span class="en-inline">Made in Montreal</span><span class="fr-inline">Fait à Montréal</span></span>
-  </div>
-
-  <div class="waitlist-wrap" id="waitlist">
-    <div class="waitlist-form" id="wform">
-      <input type="email" id="email-in" placeholder="votre@email.com"/>
-      <button class="waitlist-btn" onclick="joinList()">
-        <span class="en-inline">Join the waitlist</span>
-        <span class="fr-inline">Rejoindre la liste</span>
-      </button>
+ 
+  <!-- LEFT — Brand -->
+  <div class="hero-left">
+    <p class="eyebrow"><span class="ei">Montreal · Clean fuel · No compromise</span><span class="fi">Montréal · Carburant propre · Sans compromis</span></p>
+    <h1 class="hero-h1"><span class="ei">Fuel the <em>real</em> you.</span><span class="fi">Nourris le <em>vrai</em> toi.</span></h1>
+    <p class="hero-sub"><span class="ei">Most protein bars are engineered for shelf life. Sol is built for yours. Whole food ingredients, clean nutrition, no compromises.</span><span class="fi">La plupart des barres sont conçues pour durer sur les tablettes. Sol est conçue pour vous durer. Ingrédients entiers, nutrition propre, aucun compromis.</span></p>
+ 
+    <div class="badges">
+      <span class="badge green">✓ <span class="ei">No seed oils</span><span class="fi">Sans huiles de graine</span></span>
+      <span class="badge green">✓ <span class="ei">No whey</span><span class="fi">Sans lactosérum</span></span>
+      <span class="badge green">✓ <span class="ei">No sweeteners</span><span class="fi">Sans édulcorants</span></span>
+      <span class="badge">18g <span class="ei">protein</span><span class="fi">protéines</span></span>
+      <span class="badge">8 <span class="ei">ingredients</span><span class="fi">ingrédients</span></span>
     </div>
-    <p class="waitlist-hint" id="whint">
-      <span class="en-inline">Get 10% off your first order — no spam, ever.</span>
-      <span class="fr-inline">Obtenez 10% de rabais sur votre première commande — sans spam.</span>
-    </p>
-    <div class="success" id="wsuccess">
-      <span class="en-inline">You're on the list. Sol drops soon — we'll reach out first. 🌱</span>
-      <span class="fr-inline">Tu es sur la liste. Sol arrive bientôt — on te contacte en premier. 🌱</span>
+ 
+    <div class="bar-visual">
+      <div class="bar-icon">🍫</div>
+      <div class="bar-info">
+        <div class="bar-name">Sol — Cacao + Hemp</div>
+        <div class="bar-flavour"><span class="ei">Launch flavour · 60g bar</span><span class="fi">Saveur de lancement · Barre 60g</span></div>
+        <div class="bar-macros">
+          <div class="macro"><div class="macro-val">18g</div><div class="macro-label"><span class="ei">Protein</span><span class="fi">Protéines</span></div></div>
+          <div class="macro"><div class="macro-val">220</div><div class="macro-label"><span class="ei">Calories</span><span class="fi">Calories</span></div></div>
+          <div class="macro"><div class="macro-val">9g</div><div class="macro-label"><span class="ei">Good fats</span><span class="fi">Bons gras</span></div></div>
+          <div class="macro"><div class="macro-val">4g</div><div class="macro-label"><span class="ei">Fibre</span><span class="fi">Fibres</span></div></div>
+        </div>
+      </div>
+    </div>
+ 
+    <div class="ing-strip">
+      <span class="ing-tag">Hemp protein</span>
+      <span class="ing-tag">Spirulina</span>
+      <span class="ing-tag"><span class="ei">Medjool dates</span><span class="fi">Dattes Medjool</span></span>
+      <span class="ing-tag"><span class="ei">Raw cacao</span><span class="fi">Cacao cru</span></span>
+      <span class="ing-tag"><span class="ei">Almond butter</span><span class="fi">Beurre d'amande</span></span>
+      <span class="ing-tag"><span class="ei">Chia seeds</span><span class="fi">Graines de chia</span></span>
+      <span class="ing-tag"><span class="ei">Raw honey</span><span class="fi">Miel brut</span></span>
+      <span class="ing-tag">Chlorella</span>
+    </div>
+  </div>
+ 
+  <!-- RIGHT — Pre-order -->
+  <div class="hero-right" id="preorder">
+    <p class="preorder-label"><span class="ei">Pre-order — Limited to 100</span><span class="fi">Précommande — Limité à 100</span></p>
+    <h2 class="preorder-h2"><span class="ei">Be first. Get 10% off.</span><span class="fi">Soyez premier. 10% de rabais.</span></h2>
+    <p class="preorder-sub"><span class="ei">Sol launches in 60 days. Pre-order now, pay securely via Stripe, ship when ready.</span><span class="fi">Sol lance dans 60 jours. Précommandez maintenant, payez via Stripe, expédition dès que prêt.</span></p>
+ 
+    <div class="product-cards">
+ 
+      <a href="https://buy.stripe.com/dRm9AU7y96JV0YOaZkcQU01" target="_blank" class="product-card single">
+        <div class="card-left">
+          <div class="card-emoji">🍫</div>
+          <div>
+            <div class="card-name"><span class="ei">Single bar</span><span class="fi">Barre unique</span></div>
+            <div class="card-desc">Cacao + Hemp · <span class="ei">Try Sol first</span><span class="fi">Essayez Sol d'abord</span></div>
+          </div>
+        </div>
+        <div class="card-right">
+          <div class="card-price">$5.99</div>
+          <div class="card-per">CAD</div>
+          <div class="card-arrow">→</div>
+        </div>
+      </a>
+ 
+      <a href="https://buy.stripe.com/bJe00kbOpc4fbDs8RccQU00" target="_blank" class="product-card box">
+        <div class="best-badge">⭐ <span class="ei">BEST VALUE</span><span class="fi">MEILLEUR PRIX</span></div>
+        <div class="card-left">
+          <div class="card-emoji">📦</div>
+          <div>
+            <div class="card-name"><span class="ei">Box of 12</span><span class="fi">Boîte de 12</span></div>
+            <div class="card-desc">$4.92/<span class="ei">bar · Save $1.07/bar</span><span class="fi">barre · Économisez 1,07$/barre</span></div>
+          </div>
+        </div>
+        <div class="card-right">
+          <div class="card-price">$59</div>
+          <div class="card-per">CAD</div>
+          <div class="card-arrow">→</div>
+        </div>
+      </a>
+ 
+    </div>
+ 
+    <div class="trust-row">
+      <div class="trust-item">
+        <div class="trust-icon">🔒</div>
+        <div class="trust-text"><span class="ei">Secure Stripe checkout</span><span class="fi">Paiement Stripe sécurisé</span></div>
+      </div>
+      <div class="trust-item">
+        <div class="trust-icon">📦</div>
+        <div class="trust-text"><span class="ei">Ships in 60 days</span><span class="fi">Expédié dans 60 jours</span></div>
+      </div>
+      <div class="trust-item">
+        <div class="trust-icon">🌱</div>
+        <div class="trust-text"><span class="ei">Made in Montreal</span><span class="fi">Fait à Montréal</span></div>
+      </div>
+    </div>
+ 
+    <div class="urgency">
+      <div class="urgency-top">
+        <span class="urgency-label"><span class="ei">Pre-order spots remaining</span><span class="fi">Places restantes</span></span>
+        <span class="urgency-count">77 / 100</span>
+      </div>
+      <div class="urgency-bar-bg"><div class="urgency-bar-fill"></div></div>
+      <p class="urgency-note"><span class="ei">First 100 orders only · Limited launch batch · Ships Oct 2026</span><span class="fi">100 premières commandes · Lot de lancement limité · Expédition oct 2026</span></p>
     </div>
   </div>
 </div>
-
-<div class="divider"></div>
-
+ 
 <!-- INGREDIENTS -->
-<div class="section">
-  <p class="sec-label">
-    <span class="en-inline">What's inside — click each ingredient</span>
-    <span class="fr-inline">Ce qu'il y a dedans — clique sur chaque ingrédient</span>
-  </p>
-  <div class="ing-grid">
-    <div class="ing-card active" onclick="showIng(0)">
-      <div class="ing-icon">🌿</div>
-      <div class="ing-name"><span class="en-inline">Hemp protein</span><span class="fr-inline">Protéine de chanvre</span></div>
-      <div class="ing-role"><span class="en-inline">Primary protein</span><span class="fr-inline">Protéine principale</span></div>
+<div id="ingredients" class="section-sm">
+  <div style="max-width:1000px;margin:0 auto;">
+    <p class="sec-label"><span class="ei">What's inside — click each</span><span class="fi">Ce qu'il y a dedans — cliquez</span></p>
+    <div class="ing-grid" style="margin-bottom:12px;">
+      <div class="ing-card active" onclick="showIng(0)"><div class="ing-icon">🌿</div><div class="ing-name"><span class="ei">Hemp protein</span><span class="fi">Protéine de chanvre</span></div><div class="ing-role"><span class="ei">Primary protein</span><span class="fi">Protéine principale</span></div></div>
+      <div class="ing-card" onclick="showIng(1)"><div class="ing-icon">🌊</div><div class="ing-name">Spirulina</div><div class="ing-role"><span class="ei">Superfood boost</span><span class="fi">Boost superaliment</span></div></div>
+      <div class="ing-card" onclick="showIng(2)"><div class="ing-icon">🌴</div><div class="ing-name"><span class="ei">Medjool dates</span><span class="fi">Dattes Medjool</span></div><div class="ing-role"><span class="ei">Natural binder</span><span class="fi">Liant naturel</span></div></div>
+      <div class="ing-card" onclick="showIng(3)"><div class="ing-icon">🍫</div><div class="ing-name"><span class="ei">Raw cacao</span><span class="fi">Cacao cru</span></div><div class="ing-role"><span class="ei">Flavour + antioxidants</span><span class="fi">Saveur + antioxydants</span></div></div>
+      <div class="ing-card" onclick="showIng(4)"><div class="ing-icon">🥜</div><div class="ing-name"><span class="ei">Almond butter</span><span class="fi">Beurre d'amande</span></div><div class="ing-role"><span class="ei">Healthy fats</span><span class="fi">Bons gras</span></div></div>
+      <div class="ing-card" onclick="showIng(5)"><div class="ing-icon">🌱</div><div class="ing-name"><span class="ei">Chia seeds</span><span class="fi">Graines de chia</span></div><div class="ing-role">Omega-3 + <span class="ei">fibre</span><span class="fi">fibres</span></div></div>
+      <div class="ing-card" onclick="showIng(6)"><div class="ing-icon">🍯</div><div class="ing-name"><span class="ei">Raw honey</span><span class="fi">Miel brut</span></div><div class="ing-role"><span class="ei">Natural sweetener</span><span class="fi">Édulcorant naturel</span></div></div>
+      <div class="ing-card" onclick="showIng(7)"><div class="ing-icon">🟢</div><div class="ing-name">Chlorella</div><div class="ing-role"><span class="ei">Detox + cellular repair</span><span class="fi">Détox + réparation</span></div></div>
     </div>
-    <div class="ing-card" onclick="showIng(1)">
-      <div class="ing-icon">🌊</div>
-      <div class="ing-name">Spiruline / Spirulina</div>
-      <div class="ing-role"><span class="en-inline">Superfood boost</span><span class="fr-inline">Boost superaliment</span></div>
+    <div class="ing-detail">
+      <h3 id="ing-title"></h3>
+      <p id="ing-text"></p>
     </div>
-    <div class="ing-card" onclick="showIng(2)">
-      <div class="ing-icon">🌴</div>
-      <div class="ing-name"><span class="en-inline">Medjool dates</span><span class="fr-inline">Dattes Medjool</span></div>
-      <div class="ing-role"><span class="en-inline">Natural binder</span><span class="fr-inline">Liant naturel</span></div>
-    </div>
-    <div class="ing-card" onclick="showIng(3)">
-      <div class="ing-icon">🍫</div>
-      <div class="ing-name"><span class="en-inline">Raw cacao</span><span class="fr-inline">Cacao cru</span></div>
-      <div class="ing-role"><span class="en-inline">Flavour + antioxidants</span><span class="fr-inline">Saveur + antioxydants</span></div>
-    </div>
-    <div class="ing-card" onclick="showIng(4)">
-      <div class="ing-icon">🥜</div>
-      <div class="ing-name"><span class="en-inline">Almond butter</span><span class="fr-inline">Beurre d'amande</span></div>
-      <div class="ing-role"><span class="en-inline">Healthy fats</span><span class="fr-inline">Bons gras</span></div>
-    </div>
-    <div class="ing-card" onclick="showIng(5)">
-      <div class="ing-icon">🍯</div>
-      <div class="ing-name"><span class="en-inline">Raw honey</span><span class="fr-inline">Miel brut</span></div>
-      <div class="ing-role"><span class="en-inline">Natural sweetener</span><span class="fr-inline">Édulcorant naturel</span></div>
-    </div>
-    <div class="ing-card" onclick="showIng(6)">
-      <div class="ing-icon">🌿</div>
-      <div class="ing-name"><span class="en-inline">Chia seeds</span><span class="fr-inline">Graines de chia</span></div>
-      <div class="ing-role"><span class="en-inline">Omega-3 + fibre</span><span class="fr-inline">Oméga-3 + fibres</span></div>
-    </div>
-    <div class="ing-card" onclick="showIng(7)">
-      <div class="ing-icon">🟢</div>
-      <div class="ing-name"><span class="en-inline">Chlorella</span><span class="fr-inline">Chlorelle</span></div>
-      <div class="ing-role"><span class="en-inline">Detox + cellular repair</span><span class="fr-inline">Détox + réparation cellulaire</span></div>
-    </div>
-  </div>
-  <div class="ing-detail">
-    <h3 id="ing-title"></h3>
-    <p id="ing-text">A complete plant protein with all essential amino acids. Hemp is easier to digest than whey, contains omega-3 and omega-6 fatty acids, and causes zero gut issues. It carries the bulk of Sol's 17g protein per bar — clean, natural, Canadian-grown.</p>
   </div>
 </div>
-
-<div class="divider"></div>
-
+ 
 <!-- MACROS -->
-<div class="section">
-  <p class="sec-label">
-    <span class="en-inline">Nutrition per bar — 60g</span>
-    <span class="fr-inline">Valeur nutritive par barre — 60g</span>
-  </p>
-  <div class="macro-grid">
-    <div class="macro-card">
-      <div class="macro-unit"><span class="en-inline">grams</span><span class="fr-inline">grammes</span></div>
-      <div class="macro-val">17</div>
-      <div class="macro-label"><span class="en-inline">Protein</span><span class="fr-inline">Protéines</span></div>
-    </div>
-    <div class="macro-card">
-      <div class="macro-unit">kcal</div>
-      <div class="macro-val">220</div>
-      <div class="macro-label"><span class="en-inline">Calories</span><span class="fr-inline">Calories</span></div>
-    </div>
-    <div class="macro-card">
-      <div class="macro-unit"><span class="en-inline">grams</span><span class="fr-inline">grammes</span></div>
-      <div class="macro-val">9</div>
-      <div class="macro-label"><span class="en-inline">Healthy fats</span><span class="fr-inline">Bons gras</span></div>
-    </div>
-    <div class="macro-card">
-      <div class="macro-unit"><span class="en-inline">grams</span><span class="fr-inline">grammes</span></div>
-      <div class="macro-val">4</div>
-      <div class="macro-label"><span class="en-inline">Fibre</span><span class="fr-inline">Fibres</span></div>
+<div class="section-sm">
+  <div style="max-width:1000px;margin:0 auto;">
+    <p class="sec-label"><span class="ei">Nutrition per bar — 60g</span><span class="fi">Valeur nutritive par barre — 60g</span></p>
+    <div class="macro-row">
+      <div class="macro-card"><div class="macro-unit"><span class="ei">grams</span><span class="fi">grammes</span></div><div class="macro-big">18</div><div class="macro-lbl"><span class="ei">Protein</span><span class="fi">Protéines</span></div></div>
+      <div class="macro-card"><div class="macro-unit">kcal</div><div class="macro-big">220</div><div class="macro-lbl"><span class="ei">Calories</span><span class="fi">Calories</span></div></div>
+      <div class="macro-card"><div class="macro-unit"><span class="ei">grams</span><span class="fi">grammes</span></div><div class="macro-big">9</div><div class="macro-lbl"><span class="ei">Good fats</span><span class="fi">Bons gras</span></div></div>
+      <div class="macro-card"><div class="macro-unit"><span class="ei">grams</span><span class="fi">grammes</span></div><div class="macro-big">4</div><div class="macro-lbl"><span class="ei">Fibre</span><span class="fi">Fibres</span></div></div>
     </div>
   </div>
 </div>
-
-<div class="divider"></div>
-
+ 
 <!-- VS -->
-<div class="section">
-  <p class="sec-label">
-    <span class="en-inline">Sol vs the rest</span>
-    <span class="fr-inline">Sol vs les autres</span>
-  </p>
-  <div class="vs-grid">
-    <div class="vs-card vs-them">
-      <div class="vs-head"><span class="en-inline">Most protein bars</span><span class="fr-inline">La plupart des barres</span></div>
-      <div class="vs-item"><i class="xi">✕</i><span class="en-inline">Sucralose or erythritol</span><span class="fr-inline">Sucralose ou érythritol</span></div>
-      <div class="vs-item"><i class="xi">✕</i><span class="en-inline">Sunflower or canola oil</span><span class="fr-inline">Huile de tournesol ou canola</span></div>
-      <div class="vs-item"><i class="xi">✕</i><span class="en-inline">Whey or soy isolate</span><span class="fr-inline">Lactosérum ou soja isolé</span></div>
-      <div class="vs-item"><i class="xi">✕</i><span class="en-inline">"Natural flavours" — anything</span><span class="fr-inline">"Arômes naturels" — n'importe quoi</span></div>
-      <div class="vs-item"><i class="xi">✕</i><span class="en-inline">20+ ingredient list</span><span class="fr-inline">20+ ingrédients</span></div>
-      <div class="vs-item"><i class="xi">✕</i><span class="en-inline">Made in a factory lab</span><span class="fr-inline">Fabriquée en laboratoire</span></div>
-    </div>
-    <div class="vs-card vs-us">
-      <div class="vs-head">Sol Nutrition</div>
-      <div class="vs-item"><i class="ci">✓</i><span class="en-inline">Raw honey + medjool dates</span><span class="fr-inline">Miel brut + dattes Medjool</span></div>
-      <div class="vs-item"><i class="ci">✓</i><span class="en-inline">Zero seed oils — ever</span><span class="fr-inline">Zéro huile de graine — jamais</span></div>
-      <div class="vs-item"><i class="ci">✓</i><span class="en-inline">Hemp + spirulina protein</span><span class="fr-inline">Chanvre + spiruline</span></div>
-      <div class="vs-item"><i class="ci">✓</i><span class="en-inline">Every ingredient named</span><span class="fr-inline">Chaque ingrédient nommé</span></div>
-      <div class="vs-item"><i class="ci">✓</i><span class="en-inline">8 real ingredients only</span><span class="fr-inline">8 vrais ingrédients seulement</span></div>
-      <div class="vs-item"><i class="ci">✓</i><span class="en-inline">Made in Montreal, QC</span><span class="fr-inline">Fabriquée à Montréal, QC</span></div>
+<div class="section-sm">
+  <div style="max-width:1000px;margin:0 auto;">
+    <p class="sec-label"><span class="ei">Sol vs the rest</span><span class="fi">Sol vs les autres</span></p>
+    <div class="vs-grid">
+      <div class="vs-card vs-them">
+        <div class="vs-head"><span class="ei">Most protein bars</span><span class="fi">La plupart des barres</span></div>
+        <div class="vs-item"><i class="xi">✕</i><span class="ei">Sucralose or erythritol</span><span class="fi">Sucralose ou érythritol</span></div>
+        <div class="vs-item"><i class="xi">✕</i><span class="ei">Sunflower or canola oil</span><span class="fi">Huile de tournesol ou canola</span></div>
+        <div class="vs-item"><i class="xi">✕</i><span class="ei">Whey or soy isolate</span><span class="fi">Lactosérum ou soja isolé</span></div>
+        <div class="vs-item"><i class="xi">✕</i><span class="ei">"Natural flavours" — anything</span><span class="fi">"Arômes naturels" — n'importe quoi</span></div>
+        <div class="vs-item"><i class="xi">✕</i><span class="ei">20+ ingredient list</span><span class="fi">20+ ingrédients</span></div>
+      </div>
+      <div class="vs-card vs-us">
+        <div class="vs-head">Sol Nutrition</div>
+        <div class="vs-item"><i class="ci">✓</i><span class="ei">Raw honey + medjool dates</span><span class="fi">Miel brut + dattes Medjool</span></div>
+        <div class="vs-item"><i class="ci">✓</i><span class="ei">Zero seed oils — ever</span><span class="fi">Zéro huile de graine — jamais</span></div>
+        <div class="vs-item"><i class="ci">✓</i><span class="ei">Hemp + spirulina protein</span><span class="fi">Chanvre + spiruline</span></div>
+        <div class="vs-item"><i class="ci">✓</i><span class="ei">Every ingredient named</span><span class="fi">Chaque ingrédient nommé</span></div>
+        <div class="vs-item"><i class="ci">✓</i><span class="ei">8 real ingredients only</span><span class="fi">8 vrais ingrédients seulement</span></div>
+      </div>
     </div>
   </div>
 </div>
-
-<div class="divider"></div>
-
-<!-- FLAVOURS -->
-<div class="flavour-section">
-  <p class="sec-label" style="text-align:center;"><span class="en-inline">Flavours</span><span class="fr-inline">Saveurs</span></p>
-  <h2><span class="en-inline">Three bars. Zero compromise.</span><span class="fr-inline">Trois barres. Zéro compromis.</span></h2>
-  <p><span class="en-inline">Each flavour is built on the same clean base. Click to explore.</span><span class="fr-inline">Chaque saveur repose sur la même base propre. Clique pour explorer.</span></p>
-  <div class="flavour-pills">
-    <button class="fl-pill fl-1 sel" onclick="showFl(0,this)"><span class="en-inline">Cacao + Hemp</span><span class="fr-inline">Cacao + Chanvre</span></button>
-    <button class="fl-pill fl-2" onclick="showFl(1,this)"><span class="en-inline">Almond + Honey</span><span class="fr-inline">Amande + Miel</span></button>
-    <button class="fl-pill fl-3" onclick="showFl(2,this)"><span class="en-inline">Spirulina + Lime</span><span class="fr-inline">Spiruline + Lime</span></button>
-  </div>
-  <div class="fl-detail">
-    <h3 id="fl-name">Cacao + Hemp</h3>
-    <p id="fl-desc"></p>
-  </div>
-  <a href="#waitlist" class="nav-btn" style="display:inline-block;">
-    <span class="en-inline">Get notified at launch</span>
-    <span class="fr-inline">Être notifié au lancement</span>
-  </a>
-</div>
-
-<div class="divider"></div>
-
+ 
 <!-- STORY -->
-<div class="story-section">
-  <p class="sec-label"><span class="en-inline">The story</span><span class="fr-inline">L'histoire</span></p>
-
-  <div class="en">
-    <blockquote>"Most bars are engineered in a lab.<br><em>Sol is built from the ground up.</em>"</blockquote>
-    <p>Sol started in a Montreal kitchen with one question — why does every protein bar read like a chemistry experiment? My family has been in food distribution for years. I know what goes into most products. It's not great.</p>
-    <p>So I built the bar I actually want to eat. Hemp protein and spirulina for real plant fuel. Medjool dates to bind it naturally. Raw cacao for honest chocolate flavour. No seed oils. No sweeteners. No ingredients you need a chemistry degree to understand.</p>
-    <p style="color:#BA7517;font-weight:500;">Sol. Made in Montreal. Coming soon.</p>
-  </div>
-
-  <div class="fr">
-    <blockquote>« La plupart des barres sont conçues en laboratoire.<br><em>Sol est construite depuis la base. »</em></blockquote>
-    <p>Sol a démarré dans une cuisine à Montréal avec une seule question — pourquoi chaque barre protéinée ressemble-t-elle à une expérience chimique? Ma famille travaille dans la distribution alimentaire depuis des années. Je sais ce qui entre dans la plupart des produits. Ce n'est pas terrible.</p>
-    <p>Alors j'ai construit la barre que je veux vraiment manger. Protéine de chanvre et spiruline pour un vrai carburant végétal. Dattes Medjool pour lier naturellement. Cacao cru pour une vraie saveur de chocolat. Sans huiles de graine. Sans édulcorants. Sans ingrédients qui nécessitent un diplôme en chimie.</p>
-    <p style="color:#BA7517;font-weight:500;">Sol. Fait à Montréal. Bientôt disponible.</p>
-  </div>
-</div>
-
-<div class="divider"></div>
-
-<!-- SOCIAL -->
-<div class="social-section">
-  <p class="sec-label" style="text-align:center;"><span class="en-inline">Follow the journey</span><span class="fr-inline">Suivre l'aventure</span></p>
-  <h2><span class="en-inline">We're just getting started.</span><span class="fr-inline">On commence à peine.</span></h2>
-  <p><span class="en-inline">Follow along on Instagram and TikTok as we build Sol from the ground up — real ingredients, real process, real Montreal.</span><span class="fr-inline">Suis-nous sur Instagram et TikTok pendant qu'on construit Sol — vrais ingrédients, vrai processus, vrai Montréal.</span></p>
-  <div class="social-btns">
-    <a href="https://www.instagram.com/solnutrition.ca?igsh=ZHd5bjZtcWlqYzV2&utm_source=qr" target="_blank" rel="noopener noreferrer" class="social-btn">
-      <svg class="social-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect x="2" y="2" width="20" height="20" rx="5" stroke="#EF9F27" stroke-width="1.5"/>
-        <circle cx="12" cy="12" r="4" stroke="#EF9F27" stroke-width="1.5"/>
-        <circle cx="17.5" cy="6.5" r="1" fill="#EF9F27"/>
-      </svg>
-      @solnutrition.ca
-    </a>
-    <a href="https://www.tiktok.com/@sol_nutrition?_r=1&_t=ZS-96qQitDmwBI" target="_blank" rel="noopener noreferrer" class="social-btn">
-      <svg class="social-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M19 3H5C3.9 3 3 3.9 3 5V19C3 20.1 3.9 21 5 21H19C20.1 21 21 20.1 21 19V5C21 3.9 20.1 3 19 3Z" stroke="#EF9F27" stroke-width="1.5"/>
-        <path d="M10 12C8.3 12 7 13.3 7 15C7 16.7 8.3 18 10 18C11.7 18 13 16.7 13 15V6H16C16 7.7 17.3 9 19 9" stroke="#EF9F27" stroke-width="1.5" stroke-linecap="round"/>
-      </svg>
-      @sol_nutrition
-    </a>
+<div id="story" class="section-sm">
+  <div style="max-width:1000px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;">
+    <div class="story-block">
+      <p class="sec-label"><span class="ei">The story</span><span class="fi">L'histoire</span></p>
+      <div class="en">
+        <p class="story-quote">"Most bars are engineered in a lab. <em>Sol is built from the ground up.</em>"</p>
+        <p class="story-p">Sol started in a Montreal kitchen with one question — why does every protein bar read like a chemistry experiment? My family has been in food distribution for years. I know what goes into most products. It's not great.</p>
+        <p class="story-p">So I built the bar I actually want to eat. Eight ingredients. Every one a whole food. Nothing to hide.</p>
+        <p style="color:#BA7517;font-size:13px;font-weight:500;">Sol. Made in Montreal. Coming soon.</p>
+      </div>
+      <div class="fr">
+        <p class="story-quote">« La plupart des barres sont conçues en labo. <em>Sol est construite depuis la base. »</em></p>
+        <p class="story-p">Sol a démarré dans une cuisine à Montréal avec une seule question — pourquoi chaque barre protéinée ressemble-t-elle à une expérience chimique? Ma famille travaille dans la distribution alimentaire. Je sais ce qui entre dans la plupart des produits.</p>
+        <p class="story-p">Alors j'ai construit la barre que je veux vraiment manger. Huit ingrédients. Tous entiers. Rien à cacher.</p>
+        <p style="color:#BA7517;font-size:13px;font-weight:500;">Sol. Fait à Montréal. Bientôt disponible.</p>
+      </div>
+    </div>
+    <div>
+      <p class="sec-label"><span class="ei">Follow the journey</span><span class="fi">Suivre l'aventure</span></p>
+      <p style="font-size:13px;color:rgba(250,238,218,0.45);margin-bottom:20px;line-height:1.6;"><span class="ei">Watch Sol being built from scratch on Instagram and TikTok — real ingredients, real process, real Montreal.</span><span class="fi">Regardez Sol se construire de zéro sur Instagram et TikTok — vrais ingrédients, vrai processus, vrai Montréal.</span></p>
+      <div class="social-row">
+        <a href="https://www.instagram.com/solnutrition.ca" target="_blank" class="social-btn">
+          <svg class="sicon" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="#EF9F27" stroke-width="1.5"/><circle cx="12" cy="12" r="4" stroke="#EF9F27" stroke-width="1.5"/><circle cx="17.5" cy="6.5" r="1" fill="#EF9F27"/></svg>
+          @solnutrition.ca
+        </a>
+        <a href="https://www.tiktok.com/@sol_nutrition" target="_blank" class="social-btn">
+          <svg class="sicon" viewBox="0 0 24 24" fill="none"><path d="M19 3H5C3.9 3 3 3.9 3 5V19C3 20.1 3.9 21 5 21H19C20.1 21 21 20.1 21 19V5C21 3.9 20.1 3 19 3Z" stroke="#EF9F27" stroke-width="1.5"/><path d="M10 12C8.3 12 7 13.3 7 15C7 16.7 8.3 18 10 18C11.7 18 13 16.7 13 15V6H16C16 7.7 17.3 9 19 9" stroke="#EF9F27" stroke-width="1.5" stroke-linecap="round"/></svg>
+          @sol_nutrition
+        </a>
+      </div>
+    </div>
   </div>
 </div>
-
-<div class="divider"></div>
-
+ 
+<!-- BOTTOM CTA -->
+<div class="bottom-cta">
+  <h2><span class="ei">Ready to pre-order?</span><span class="fi">Prêt à précommander?</span></h2>
+  <p><span class="ei">Lock in your bars before we sell out. Secure payment via Stripe. Ships in 60 days.</span><span class="fi">Réservez vos barres avant rupture de stock. Paiement Stripe sécurisé. Expédition dans 60 jours.</span></p>
+  <div class="cta-btns">
+    <a href="https://buy.stripe.com/dRm9AU7y96JV0YOaZkcQU01" target="_blank" class="cta-btn-secondary">
+      <span class="ei">Single bar — $5.99</span><span class="fi">Barre unique — 5,99$</span>
+    </a>
+    <a href="https://buy.stripe.com/bJe00kbOpc4fbDs8RccQU00" target="_blank" class="cta-btn-primary">
+      <span class="ei">Box of 12 — $59 ⭐</span><span class="fi">Boîte de 12 — 59$ ⭐</span>
+    </a>
+  </div>
+</div>
+ 
 <footer>
   <span class="footer-logo">SOL</span>
-  <span class="footer-copy"><span class="en-inline">Made in Montreal, Quebec · solnutrition.ca</span><span class="fr-inline">Fabriqué à Montréal, Québec · solnutrition.ca</span></span>
+  <span class="footer-copy"><span class="ei">Made in Montreal, Quebec · solnutrition.ca</span><span class="fi">Fait à Montréal, Québec · solnutrition.ca</span></span>
   <div class="footer-links">
-    <a href="https://www.instagram.com/solnutrition.ca?igsh=ZHd5bjZtcWlqYzV2&utm_source=qr" target="_blank" rel="noopener noreferrer">Instagram</a>
-    <a href="https://www.tiktok.com/@sol_nutrition?_r=1&_t=ZS-96qQitDmwBI" target="_blank" rel="noopener noreferrer">TikTok</a>
-    <a href="mailto:hello@solnutrition.ca">
-      <span class="en-inline">Contact</span>
-      <span class="fr-inline">Nous contacter</span>
-    </a>
+    <a href="https://www.instagram.com/solnutrition.ca" target="_blank" class="footer-link">Instagram</a>
+    <a href="https://www.tiktok.com/@sol_nutrition" target="_blank" class="footer-link">TikTok</a>
+    <a href="mailto:hello@solnutrition.ca" class="footer-link"><span class="ei">Contact</span><span class="fi">Contact</span></a>
   </div>
 </footer>
-
+ 
 <script>
 // LANGUAGE
+let currentLang = 'en';
 function setLang(lang) {
+  currentLang = lang;
   document.getElementById('btn-en').classList.toggle('active', lang==='en');
   document.getElementById('btn-fr').classList.toggle('active', lang==='fr');
-  document.body.classList.toggle('fr-mode', lang==='fr');
+  document.body.classList.toggle('fr', lang==='fr');
   localStorage.setItem('sol-lang', lang);
-  // Refresh dynamic text in correct language
-  const i = currentIng;
-  const f = currentFl;
-  const l = lang;
-  document.getElementById('ing-title').textContent = ings[l][i].t;
-  document.getElementById('ing-text').textContent = ings[l][i].p;
-  document.getElementById('fl-name').textContent = fls[l][f].n;
-  document.getElementById('fl-desc').textContent = fls[l][f].d;
+  showIng(currentIng);
 }
-
-// Auto-detect language
 const saved = localStorage.getItem('sol-lang');
 const browserFr = navigator.language && navigator.language.toLowerCase().startsWith('fr');
-if(saved === 'fr' || (!saved && browserFr)) { setLang('fr'); }
-
+if(saved === 'fr' || (!saved && browserFr)) setLang('fr');
+ 
 // INGREDIENTS
 let currentIng = 0;
 const ings = {
   en:[
-    {t:'Hemp protein',p:'A complete plant protein with all essential amino acids. Hemp is easier to digest than whey, contains omega-3 and omega-6 fatty acids, and causes zero gut issues. It carries the bulk of Sol\'s 17g protein per bar — clean, natural, Canadian-grown.'},
-    {t:'Spirulina',p:'One of the most nutrient-dense foods on earth. Spirulina adds 5–8g of plant protein per bar plus iron, B vitamins, and powerful antioxidants. It\'s the ingredient that separates Sol from every other bar on the shelf.'},
-    {t:'Medjool dates',p:'Nature\'s binder and sweetener in one. Medjool dates hold the bar together without glycerin, tapioca syrup, or any processed binder. They bring natural sugar, fibre, potassium, and magnesium — no processing required.'},
-    {t:'Raw cacao',p:'Not cocoa powder — raw cacao. Cold-pressed from the cacao bean, retaining all the flavanols, magnesium, and antioxidants that processing destroys. The deepest, most honest chocolate flavour possible.'},
-    {t:'Almond butter',p:'A source of monounsaturated fats, vitamin E, and magnesium. Almond butter gives Sol its texture and satiety. Healthy fat that keeps you full. No added oils, no emulsifiers. Just ground almonds.'},
-    {t:'Raw honey',p:'Antimicrobial, rich in enzymes and trace minerals, and naturally sweet without the blood sugar spike of refined sugar. A touch of raw honey rounds the flavour without artificial sweeteners or sugar alcohols.'},
-  {t:'Chia seeds',p:'A dense source of omega-3 fatty acids, fibre, and plant-based calcium. Chia seeds add texture and moisture retention to the bar, keeping it from drying out. They also slow sugar absorption — no energy crash.'},
-  {t:'Chlorella',p:'The most chlorophyll-rich food on earth. Chlorella supports detoxification, binds to heavy metals, and contains a unique growth factor (CGF) that supports cellular repair. Paired with spirulina it creates an elite green superfood stack found in no other protein bar in Canada. Always sourced as broken cell wall chlorella for maximum bioavailability.'}
+    {t:'Hemp protein',p:'A complete plant protein with all essential amino acids. Hemp is easier to digest than whey, contains omega-3 and omega-6 fatty acids, and causes zero gut issues. The backbone of Sol\'s 18g protein per bar.'},
+    {t:'Spirulina',p:'One of the most nutrient-dense foods on earth. Spirulina adds plant protein, iron, B vitamins, and powerful antioxidants. The ingredient that separates Sol from every other bar on the shelf.'},
+    {t:'Medjool dates',p:'Nature\'s binder and sweetener in one. Medjool dates hold the bar together without glycerin or tapioca syrup. They bring natural sugar, fibre, potassium and magnesium — no processing required.'},
+    {t:'Raw cacao',p:'Not cocoa powder — raw cacao. Cold-pressed from the cacao bean, retaining all flavanols, magnesium, and antioxidants that processing destroys. The deepest, most honest chocolate flavour possible.'},
+    {t:'Almond butter',p:'Monounsaturated fats, vitamin E, and magnesium. Almond butter gives Sol its texture and satiety. Healthy fat that keeps you full. No added oils, no emulsifiers. Just ground almonds.'},
+    {t:'Chia seeds',p:'Dense in omega-3 fatty acids, fibre, and plant calcium. Chia seeds add texture and retain moisture in the bar. They slow sugar absorption — no energy crash after eating Sol.'},
+    {t:'Raw honey',p:'Antimicrobial, rich in enzymes and trace minerals, naturally sweet without the blood sugar spike of refined sugar. A touch of raw honey rounds the flavour without artificial sweeteners.'},
+    {t:'Chlorella',p:'The most chlorophyll-rich food on earth. Chlorella supports detoxification, binds to heavy metals, and contains CGF — a unique growth factor that supports cellular repair. Paired with spirulina, it creates an elite green superfood stack found in no other bar in Canada. Always sourced as broken cell wall chlorella.'}
   ],
   fr:[
-    {t:'Protéine de chanvre',p:'Une protéine végétale complète avec tous les acides aminés essentiels. Le chanvre est plus facile à digérer que le lactosérum, contient des acides gras oméga-3 et oméga-6, et ne cause aucun problème digestif. Il constitue l\'essentiel des 17g de protéines par barre — propre, naturel, cultivé au Canada.'},
-    {t:'Spiruline',p:'L\'un des aliments les plus riches en nutriments sur terre. La spiruline ajoute 5 à 8g de protéines végétales par barre, plus du fer, des vitamines B et de puissants antioxydants. C\'est l\'ingrédient qui distingue Sol de toutes les autres barres.'},
-    {t:'Dattes Medjool',p:'Le liant et l\'édulcorant naturel en un. Les dattes Medjool tiennent la barre ensemble sans glycérine, sirop de tapioca, ou tout autre liant transformé. Elles apportent du sucre naturel, des fibres, du potassium et du magnésium — sans transformation.'},
-    {t:'Cacao cru',p:'Pas de la poudre de cacao — du cacao cru. Pressé à froid à partir de la fève de cacao, conservant tous les flavanols, le magnésium et les antioxydants que la transformation détruit. La saveur chocolatée la plus profonde et la plus honnête possible.'},
-    {t:'Beurre d\'amande',p:'Une source de graisses monoinsaturées, de vitamine E et de magnésium. Le beurre d\'amande donne à Sol sa texture et sa satiété. Une bonne graisse qui vous rassasie. Sans huiles ajoutées, sans émulsifiants. Juste des amandes moulues.'},
-    {t:'Miel brut',p:'Antimicrobien, riche en enzymes et en minéraux, et naturellement sucré sans le pic de glycémie du sucre raffiné. Une touche de miel brut arrondit la saveur sans édulcorants artificiels ni alcools de sucre.'},
-  {t:'Graines de chia',p:'Une source dense d\'acides gras oméga-3, de fibres et de calcium végétal. Les graines de chia ajoutent de la texture et retiennent l\'humidité dans la barre. Elles ralentissent également l\'absorption du sucre — pas de chute d\'énergie.'},
-  {t:'Chlorelle',p:'L\'aliment le plus riche en chlorophylle au monde. La chlorelle soutient la détoxification, se lie aux métaux lourds et contient un facteur de croissance unique (CGF) qui favorise la réparation cellulaire. Associée à la spiruline, elle crée une combinaison superaliment verte d\'élite. Toujours sourcée en chlorelle à paroi cellulaire brisée pour une biodisponibilité maximale.'}
+    {t:'Protéine de chanvre',p:'Une protéine végétale complète avec tous les acides aminés essentiels. Plus facile à digérer que le lactosérum, riche en oméga-3 et oméga-6. La base des 18g de protéines par barre Sol.'},
+    {t:'Spiruline',p:'L\'un des aliments les plus riches en nutriments sur terre. La spiruline apporte protéines végétales, fer, vitamines B et antioxydants. L\'ingrédient qui distingue Sol de toutes les autres barres.'},
+    {t:'Dattes Medjool',p:'Le liant et l\'édulcorant naturel en un. Les dattes Medjool tiennent la barre sans glycérine ni sirop de tapioca. Sucre naturel, fibres, potassium et magnésium — sans transformation.'},
+    {t:'Cacao cru',p:'Pas de la poudre de cacao — du cacao cru. Pressé à froid, conservant tous les flavanols, magnésium et antioxydants que la transformation détruit. La saveur chocolatée la plus honnête possible.'},
+    {t:'Beurre d\'amande',p:'Graisses monoinsaturées, vitamine E et magnésium. Le beurre d\'amande donne à Sol sa texture et sa satiété. Sans huiles ajoutées, sans émulsifiants. Juste des amandes moulues.'},
+    {t:'Graines de chia',p:'Riches en acides gras oméga-3, fibres et calcium végétal. Les graines de chia ajoutent de la texture et retiennent l\'humidité. Elles ralentissent l\'absorption du sucre — pas de chute d\'énergie.'},
+    {t:'Miel brut',p:'Antimicrobien, riche en enzymes et minéraux, naturellement sucré sans pic glycémique. Une touche de miel brut arrondit la saveur sans édulcorants artificiels.'},
+    {t:'Chlorelle',p:'L\'aliment le plus riche en chlorophylle au monde. La chlorelle soutient la détoxification et contient le CGF — un facteur de croissance unique pour la réparation cellulaire. Associée à la spiruline, elle crée une combinaison superaliment d\'élite. Toujours à paroi cellulaire brisée.'}
   ]
 };
-
-function showIng(i){
+function showIng(i) {
   currentIng = i;
   document.querySelectorAll('.ing-card').forEach((c,x)=>c.classList.toggle('active',x===i));
-  const lang = document.body.classList.contains('fr-mode') ? 'fr' : 'en';
-  document.getElementById('ing-title').textContent = ings[lang][i].t;
-  document.getElementById('ing-text').textContent = ings[lang][i].p;
+  const l = document.body.classList.contains('fr') ? 'fr' : 'en';
+  document.getElementById('ing-title').textContent = ings[l][i].t;
+  document.getElementById('ing-text').textContent = ings[l][i].p;
 }
 showIng(0);
-
-// FLAVOURS
-let currentFl = 0;
-const fls = {
-  en:[
-    {n:'Cacao + Hemp',d:'The launch bar. Rich, dark, grounding. Raw cacao and hemp seeds hit hard — this is the one for anyone who doesn\'t need it to taste like a candy bar. Real chocolate flavour from real cacao. Launching first.'},
-    {n:'Almond + Honey',d:'Lighter, warmer, sweeter. Almond butter and raw honey lead — this is the bar for anyone who wants something approachable and satisfying without the intensity of dark cacao. Flavour 2 drops when batch 1 sells out.'},
-    {n:'Spirulina + Lime',d:'Bold, green, citrus. Not for everyone — that\'s the point. Bright lime zest cuts through the spirulina earthiness. For anyone who goes all-in on clean eating and wants something that proves it. Flavour 3.'}
-  ],
-  fr:[
-    {n:'Cacao + Chanvre',d:'La barre de lancement. Riche, sombre, ancrante. Le cacao cru et les graines de chanvre frappent fort — c\'est celle pour l\'homme qui n\'a pas besoin qu\'elle goûte comme une sucrerie. Vrai goût de chocolat. Lance en premier.'},
-    {n:'Amande + Miel',d:'Plus légère, plus chaude, plus sucrée. Le beurre d\'amande et le miel brut mènent — c\'est la barre pour quiconque veut quelque chose d\'accessible sans l\'intensité du cacao foncé. Saveur 2 disponible quand le lot 1 est épuisé.'},
-    {n:'Spiruline + Lime',d:'Audacieuse, verte, citronnée. Pas pour tout le monde — c\'est le but. Le zeste de lime coupe l\'aspect terreux de la spiruline. Pour quiconque mise tout sur une alimentation propre et veut quelque chose qui le prouve. Saveur 3.'}
-  ]
-};
-
-function showFl(i, el){
-  currentFl = i;
-  document.querySelectorAll('.fl-pill').forEach(p=>p.classList.remove('sel'));
-  el.classList.add('sel');
-  const lang = document.body.classList.contains('fr-mode') ? 'fr' : 'en';
-  document.getElementById('fl-name').textContent = fls[lang][i].n;
-  document.getElementById('fl-desc').textContent = fls[lang][i].d;
-}
-showFl(0, document.querySelectorAll('.fl-pill')[0]);
-
-// WAITLIST
-function joinList(){
-  const v=document.getElementById('email-in').value.trim();
-  if(!v||!v.includes('@')){
-    document.getElementById('email-in').style.borderColor='#E24B4A';
-    return;
-  }
-  document.getElementById('wform').style.display='none';
-  document.getElementById('whint').style.display='none';
-  document.getElementById('wsuccess').style.display='block';
-}
 </script>
 </body>
 </html>
+ 
