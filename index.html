@@ -183,6 +183,14 @@ footer{padding:28px 64px;border-top:0.5px solid rgba(250,238,218,0.06);display:f
   .trust-row{grid-template-columns:1fr;}
   .social-row{flex-direction:column;}
 }
+
+.faq-item{background:var(--color-background-primary);border:0.5px solid var(--color-border-tertiary);border-radius:10px;padding:16px 20px;cursor:pointer;transition:all 0.2s;margin-bottom:2px;}
+.faq-item:hover{border-color:var(--color-border-secondary);}
+.faq-q{display:flex;justify-content:space-between;align-items:center;font-size:13px;font-weight:500;color:var(--color-text-primary);}
+.faq-arrow{color:#BA7517;font-size:16px;transition:transform 0.2s;flex-shrink:0;margin-left:10px;}
+.faq-a{font-size:12px;color:var(--color-text-secondary);line-height:1.7;max-height:0;overflow:hidden;transition:max-height 0.3s ease,margin-top 0.2s;margin-top:0;}
+.faq-a.open{max-height:200px;margin-top:10px;}
+.faq-arrow.open{transform:rotate(180deg);}
 </style>
 </head>
 <body>
@@ -201,6 +209,7 @@ footer{padding:28px 64px;border-top:0.5px solid rgba(250,238,218,0.06);display:f
   </a>
   <div class="nav-links">
     <a href="#ingredients" class="nav-link"><span class="ei">Ingredients</span><span class="fi">Ingrédients</span></a>
+    <a href="#why" class="nav-link"><span class="ei">Why Sol</span><span class="fi">Pourquoi Sol</span></a>
     <a href="#story" class="nav-link"><span class="ei">Story</span><span class="fi">Histoire</span></a>
     <a href="#preorder" class="nav-link"><span class="ei">Pre-order</span><span class="fi">Précommande</span></a>
     <div class="lang-toggle">
@@ -210,6 +219,23 @@ footer{padding:28px 64px;border-top:0.5px solid rgba(250,238,218,0.06);display:f
     <a href="#preorder" class="preorder-nav-btn"><span class="ei">Pre-order now</span><span class="fi">Précommander</span></a>
   </div>
 </nav>
+
+<!-- CLAIMS STRIP -->
+<div style="background:rgba(186,117,23,0.08);border-bottom:0.5px solid rgba(186,117,23,0.15);padding:8px 32px;display:flex;align-items:center;justify-content:center;gap:24px;flex-wrap:wrap;">
+  <span style="font-size:11px;font-weight:500;color:#BA7517;letter-spacing:0.05em;display:flex;align-items:center;gap:6px;"><span style="color:#1D9E75;">✓</span><span class="ei">No seed oils</span><span class="fi">Sans huiles de graine</span></span>
+  <span style="color:rgba(186,117,23,0.3);font-size:10px;">·</span>
+  <span style="font-size:11px;font-weight:500;color:#BA7517;letter-spacing:0.05em;display:flex;align-items:center;gap:6px;"><span style="color:#1D9E75;">✓</span><span class="ei">No added sugars</span><span class="fi">Sans sucres ajoutés</span></span>
+  <span style="color:rgba(186,117,23,0.3);font-size:10px;">·</span>
+  <span style="font-size:11px;font-weight:500;color:#BA7517;letter-spacing:0.05em;display:flex;align-items:center;gap:6px;"><span style="color:#1D9E75;">✓</span><span class="ei">No artificial sweeteners</span><span class="fi">Sans édulcorants artificiels</span></span>
+  <span style="color:rgba(186,117,23,0.3);font-size:10px;">·</span>
+  <span style="font-size:11px;font-weight:500;color:#BA7517;letter-spacing:0.05em;display:flex;align-items:center;gap:6px;"><span style="color:#1D9E75;">✓</span><span class="ei">No whey</span><span class="fi">Sans lactosérum</span></span>
+  <span style="color:rgba(186,117,23,0.3);font-size:10px;">·</span>
+  <span style="font-size:11px;font-weight:500;color:#BA7517;letter-spacing:0.05em;display:flex;align-items:center;gap:6px;"><span style="color:#1D9E75;">✓</span><span class="ei">Vegan</span><span class="fi">Végétalien</span></span>
+  <span style="color:rgba(186,117,23,0.3);font-size:10px;">·</span>
+  <span style="font-size:11px;font-weight:500;color:#BA7517;letter-spacing:0.05em;display:flex;align-items:center;gap:6px;"><span style="color:#1D9E75;">✓</span><span class="ei">Gluten free</span><span class="fi">Sans gluten</span></span>
+  <span style="color:rgba(186,117,23,0.3);font-size:10px;">·</span>
+  <span style="font-size:11px;font-weight:500;color:#BA7517;letter-spacing:0.05em;display:flex;align-items:center;gap:6px;"><span style="color:#1D9E75;">✓</span><span class="ei">Made in Montreal</span><span class="fi">Fait à Montréal</span></span>
+</div>
 
 <!-- HERO — SPLIT -->
 <div class="hero">
@@ -232,12 +258,12 @@ footer{padding:28px 64px;border-top:0.5px solid rgba(250,238,218,0.06);display:f
       <div class="bar-icon">🍫</div>
       <div class="bar-info">
         <div class="bar-name">Sol — Cacao + Hemp</div>
-        <div class="bar-flavour"><span class="ei">Launch flavour · 60g bar</span><span class="fi">Saveur de lancement · Barre 60g</span></div>
+        <div class="bar-flavour"><span class="ei">Launch flavour · 65g bar</span><span class="fi">Saveur de lancement · Barre 65g</span></div>
         <div class="bar-macros">
           <div class="macro"><div class="macro-val">18g</div><div class="macro-label"><span class="ei">Protein</span><span class="fi">Protéines</span></div></div>
-          <div class="macro"><div class="macro-val">220</div><div class="macro-label"><span class="ei">Calories</span><span class="fi">Calories</span></div></div>
-          <div class="macro"><div class="macro-val">9g</div><div class="macro-label"><span class="ei">Good fats</span><span class="fi">Bons gras</span></div></div>
-          <div class="macro"><div class="macro-val">4g</div><div class="macro-label"><span class="ei">Fibre</span><span class="fi">Fibres</span></div></div>
+          <div class="macro"><div class="macro-val">230</div><div class="macro-label"><span class="ei">Calories</span><span class="fi">Calories</span></div></div>
+          <div class="macro"><div class="macro-val">10g</div><div class="macro-label"><span class="ei">Good fats</span><span class="fi">Bons gras</span></div></div>
+          <div class="macro"><div class="macro-val">5g</div><div class="macro-label"><span class="ei">Fibre</span><span class="fi">Fibres</span></div></div>
         </div>
       </div>
     </div>
@@ -267,7 +293,12 @@ footer{padding:28px 64px;border-top:0.5px solid rgba(250,238,218,0.06);display:f
           <div class="card-emoji">🍫</div>
           <div>
             <div class="card-name"><span class="ei">Single bar</span><span class="fi">Barre unique</span></div>
-            <div class="card-desc">Cacao + Hemp · <span class="ei">Try Sol first</span><span class="fi">Essayez Sol d'abord</span></div>
+            <div class="card-desc">Cacao + Hemp · 18g <span class="ei">protein · Try Sol first</span><span class="fi">protéines · Essayez Sol d'abord</span></div>
+            <div style="display:flex;gap:4px;margin-top:6px;flex-wrap:wrap;">
+              <span style="font-size:9px;padding:2px 6px;border-radius:20px;background:rgba(29,158,117,0.1);color:#0F6E56;font-weight:500;">Vegan</span>
+              <span style="font-size:9px;padding:2px 6px;border-radius:20px;background:rgba(29,158,117,0.1);color:#0F6E56;font-weight:500;"><span class="ei">No seed oils</span><span class="fi">Sans huiles</span></span>
+              <span style="font-size:9px;padding:2px 6px;border-radius:20px;background:rgba(29,158,117,0.1);color:#0F6E56;font-weight:500;"><span class="ei">Gluten free</span><span class="fi">Sans gluten</span></span>
+            </div>
           </div>
         </div>
         <div class="card-right">
@@ -365,15 +396,96 @@ footer{padding:28px 64px;border-top:0.5px solid rgba(250,238,218,0.06);display:f
 <!-- MACROS -->
 <div class="section-sm">
   <div style="max-width:1000px;margin:0 auto;">
-    <p class="sec-label"><span class="ei">Nutrition per bar — 60g</span><span class="fi">Valeur nutritive par barre — 60g</span></p>
+    <p class="sec-label"><span class="ei">Nutrition per bar — 65g</span><span class="fi">Valeur nutritive par barre — 65g</span></p>
     <div class="macro-row">
       <div class="macro-card"><div class="macro-unit"><span class="ei">grams</span><span class="fi">grammes</span></div><div class="macro-big">18</div><div class="macro-lbl"><span class="ei">Protein</span><span class="fi">Protéines</span></div></div>
-      <div class="macro-card"><div class="macro-unit">kcal</div><div class="macro-big">220</div><div class="macro-lbl"><span class="ei">Calories</span><span class="fi">Calories</span></div></div>
-      <div class="macro-card"><div class="macro-unit"><span class="ei">grams</span><span class="fi">grammes</span></div><div class="macro-big">9</div><div class="macro-lbl"><span class="ei">Good fats</span><span class="fi">Bons gras</span></div></div>
-      <div class="macro-card"><div class="macro-unit"><span class="ei">grams</span><span class="fi">grammes</span></div><div class="macro-big">4</div><div class="macro-lbl"><span class="ei">Fibre</span><span class="fi">Fibres</span></div></div>
+      <div class="macro-card"><div class="macro-unit">kcal</div><div class="macro-big">230</div><div class="macro-lbl"><span class="ei">Calories</span><span class="fi">Calories</span></div></div>
+      <div class="macro-card"><div class="macro-unit"><span class="ei">grams</span><span class="fi">grammes</span></div><div class="macro-big">10</div><div class="macro-lbl"><span class="ei">Good fats</span><span class="fi">Bons gras</span></div></div>
+      <div class="macro-card"><div class="macro-unit"><span class="ei">grams</span><span class="fi">grammes</span></div><div class="macro-big">5</div><div class="macro-lbl"><span class="ei">Fibre</span><span class="fi">Fibres</span></div></div>
     </div>
   </div>
 </div>
+
+
+<!-- WHY SOL SECTION -->
+<div style="padding:64px 40px;max-width:900px;margin:0 auto;" id="why">
+  <p class="sec-label"><span class="ei">Why Sol — what the label actually means</span><span class="fi">Pourquoi Sol — ce que l'étiquette signifie vraiment</span></p>
+
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:20px;">
+
+    <div style="background:rgba(29,158,117,0.06);border:0.5px solid rgba(29,158,117,0.2);border-radius:12px;padding:20px 22px;">
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px;">
+        <span style="font-size:20px;">🚫</span>
+        <span style="font-size:14px;font-weight:500;color:var(--color-text-primary);"><span class="ei">No seed oils — ever</span><span class="fi">Sans huiles de graine — jamais</span></span>
+      </div>
+      <p style="font-size:12px;color:var(--color-text-secondary);line-height:1.7;"><span class="ei">Seed oils — sunflower, canola, soybean — are ultra-processed, high in omega-6, and in almost every bar on the market. They're cheap. That's the only reason they're there. Sol uses almond butter and chia seeds for fat instead. Whole food sources. The way it should be.</span><span class="fi">Les huiles de graine — tournesol, canola, soja — sont ultra-transformées, riches en oméga-6, et présentes dans presque toutes les barres. Elles sont bon marché. C'est la seule raison. Sol utilise du beurre d'amande et des graines de chia à la place.</span></p>
+    </div>
+
+    <div style="background:rgba(29,158,117,0.06);border:0.5px solid rgba(29,158,117,0.2);border-radius:12px;padding:20px 22px;">
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px;">
+        <span style="font-size:20px;">🍯</span>
+        <span style="font-size:14px;font-weight:500;color:var(--color-text-primary);"><span class="ei">No added sugars — not one gram</span><span class="fi">Sans sucres ajoutés — pas un gramme</span></span>
+      </div>
+      <p style="font-size:12px;color:var(--color-text-secondary);line-height:1.7;"><span class="ei">The sweetness in Sol comes entirely from medjool dates and raw honey — whole foods your body knows what to do with. No tapioca syrup. No glucose-fructose. No cane sugar hiding behind a clean label. Nothing added. Nothing hidden.</span><span class="fi">La douceur de Sol vient entièrement des dattes Medjool et du miel brut — des aliments entiers que votre corps reconnaît. Sans sirop de tapioca. Sans glucose-fructose. Sans sucre caché derrière une belle étiquette.</span></p>
+    </div>
+
+    <div style="background:rgba(29,158,117,0.06);border:0.5px solid rgba(29,158,119,0.2);border-radius:12px;padding:20px 22px;">
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px;">
+        <span style="font-size:20px;">⚗️</span>
+        <span style="font-size:14px;font-weight:500;color:var(--color-text-primary);"><span class="ei">No artificial sweeteners — not sucralose, not erythritol</span><span class="fi">Sans édulcorants artificiels — ni sucralose, ni érythritol</span></span>
+      </div>
+      <p style="font-size:12px;color:var(--color-text-secondary);line-height:1.7;"><span class="ei">Sucralose and erythritol are the dirty secret of most "clean" protein bars. They let brands claim zero sugar while loading bars with chemicals linked to gut microbiome disruption and bloating. Sol contains neither. If you can't pronounce it, it's not in Sol.</span><span class="fi">Le sucralose et l'érythritol sont le secret honteux de la plupart des barres protéinées "propres". Sol ne contient ni l'un ni l'autre. Si vous ne pouvez pas le prononcer, ce n'est pas dans Sol.</span></p>
+    </div>
+
+    <div style="background:rgba(29,158,117,0.06);border:0.5px solid rgba(29,158,117,0.2);border-radius:12px;padding:20px 22px;">
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px;">
+        <span style="font-size:20px;">🌿</span>
+        <span style="font-size:14px;font-weight:500;color:var(--color-text-primary);"><span class="ei">No whey — 100% plant protein</span><span class="fi">Sans lactosérum — 100% protéines végétales</span></span>
+      </div>
+      <p style="font-size:12px;color:var(--color-text-secondary);line-height:1.7;"><span class="ei">Whey protein is a dairy byproduct that causes digestive issues in a large percentage of people. Sol uses hemp protein and spirulina instead — complete plant proteins with full amino acid profiles, easier to digest, and genuinely better for the planet.</span><span class="fi">La protéine de lactosérum est un sous-produit laitier qui cause des problèmes digestifs. Sol utilise la protéine de chanvre et la spiruline à la place — des protéines végétales complètes, plus faciles à digérer.</span></p>
+    </div>
+
+    <div style="background:rgba(29,158,117,0.06);border:0.5px solid rgba(29,158,117,0.2);border-radius:12px;padding:20px 22px;">
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px;">
+        <span style="font-size:20px;">🌱</span>
+        <span style="font-size:14px;font-weight:500;color:var(--color-text-primary);"><span class="ei">Vegan and gluten free</span><span class="fi">Végétalien et sans gluten</span></span>
+      </div>
+      <p style="font-size:12px;color:var(--color-text-secondary);line-height:1.7;"><span class="ei">Every one of Sol's 8 ingredients is plant-based. No animal products of any kind. And all 8 are naturally gluten-free — no wheat, no barley, no rye. Sol works for almost every dietary need without compromising on taste or nutrition.</span><span class="fi">Chacun des 8 ingrédients de Sol est d'origine végétale. Sans produits animaux. Et tous les 8 sont naturellement sans gluten. Sol convient à presque tous les besoins alimentaires.</span></p>
+    </div>
+
+    <div style="background:rgba(29,158,117,0.06);border:0.5px solid rgba(29,158,117,0.2);border-radius:12px;padding:20px 22px;">
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px;">
+        <span style="font-size:20px;">📋</span>
+        <span style="font-size:14px;font-weight:500;color:var(--color-text-primary);"><span class="ei">"Natural flavours" — not in Sol</span><span class="fi">"Arômes naturels" — pas dans Sol</span></span>
+      </div>
+      <p style="font-size:12px;color:var(--color-text-secondary);line-height:1.7;"><span class="ei">Under Canadian law "natural flavours" can legally mean almost anything — including compounds derived from beaver glands, petrochemicals, or laboratory-created molecules. Sol has no natural flavours. The flavour comes from raw cacao, dates, and honey. Real food. Nothing hidden.</span><span class="fi">En droit canadien, les "arômes naturels" peuvent légalement désigner presque n'importe quoi. Sol n'en contient aucun. La saveur vient du cacao cru, des dattes et du miel. De la vraie nourriture. Rien de caché.</span></p>
+    </div>
+
+  </div>
+
+  <!-- LABEL CLAIMS VISUAL -->
+  <div style="background:#2C2C2A;border-radius:14px;padding:24px 28px;border:0.5px solid rgba(186,117,23,0.3);">
+    <p style="font-size:10px;letter-spacing:0.16em;text-transform:uppercase;color:#BA7517;margin-bottom:16px;"><span class="ei">What you'll see on every Sol label</span><span class="fi">Ce que vous verrez sur chaque étiquette Sol</span></p>
+    <div style="display:flex;flex-wrap:wrap;gap:8px;">
+      <span style="background:rgba(29,158,117,0.15);border:0.5px solid rgba(29,158,117,0.35);border-radius:20px;padding:6px 14px;font-size:11px;font-weight:500;color:#5DCAA5;"><span class="ei">✓ No added sugars</span><span class="fi">✓ Sans sucres ajoutés</span></span>
+      <span style="background:rgba(29,158,117,0.15);border:0.5px solid rgba(29,158,117,0.35);border-radius:20px;padding:6px 14px;font-size:11px;font-weight:500;color:#5DCAA5;"><span class="ei">✓ No artificial sweeteners</span><span class="fi">✓ Sans édulcorants artificiels</span></span>
+      <span style="background:rgba(29,158,117,0.15);border:0.5px solid rgba(29,158,117,0.35);border-radius:20px;padding:6px 14px;font-size:11px;font-weight:500;color:#5DCAA5;"><span class="ei">✓ No artificial flavours</span><span class="fi">✓ Sans arômes artificiels</span></span>
+      <span style="background:rgba(29,158,117,0.15);border:0.5px solid rgba(29,158,117,0.35);border-radius:20px;padding:6px 14px;font-size:11px;font-weight:500;color:#5DCAA5;"><span class="ei">✓ No preservatives</span><span class="fi">✓ Sans agents de conservation</span></span>
+      <span style="background:rgba(29,158,119,0.15);border:0.5px solid rgba(29,158,117,0.35);border-radius:20px;padding:6px 14px;font-size:11px;font-weight:500;color:#5DCAA5;"><span class="ei">✓ Source of protein</span><span class="fi">✓ Source de protéines</span></span>
+      <span style="background:rgba(29,158,117,0.15);border:0.5px solid rgba(29,158,117,0.35);border-radius:20px;padding:6px 14px;font-size:11px;font-weight:500;color:#5DCAA5;"><span class="ei">✓ Good source of fibre</span><span class="fi">✓ Bonne source de fibres</span></span>
+      <span style="background:rgba(29,158,117,0.15);border:0.5px solid rgba(29,158,117,0.35);border-radius:20px;padding:6px 14px;font-size:11px;font-weight:500;color:#5DCAA5;"><span class="ei">✓ Vegan</span><span class="fi">✓ Végétalien</span></span>
+      <span style="background:rgba(29,158,117,0.15);border:0.5px solid rgba(29,158,117,0.35);border-radius:20px;padding:6px 14px;font-size:11px;font-weight:500;color:#5DCAA5;"><span class="ei">✓ Gluten free</span><span class="fi">✓ Sans gluten</span></span>
+      <span style="background:rgba(29,158,117,0.15);border:0.5px solid rgba(29,158,117,0.35);border-radius:20px;padding:6px 14px;font-size:11px;font-weight:500;color:#5DCAA5;"><span class="ei">✓ No seed oils</span><span class="fi">✓ Sans huiles de graine</span></span>
+      <span style="background:rgba(29,158,117,0.15);border:0.5px solid rgba(29,158,117,0.35);border-radius:20px;padding:6px 14px;font-size:11px;font-weight:500;color:#5DCAA5;"><span class="ei">✓ 8 whole food ingredients</span><span class="fi">✓ 8 ingrédients entiers</span></span>
+      <span style="background:rgba(29,158,117,0.15);border:0.5px solid rgba(29,158,117,0.35);border-radius:20px;padding:6px 14px;font-size:11px;font-weight:500;color:#5DCAA5;"><span class="ei">✓ Best before date on every bar</span><span class="fi">✓ Date de péremption sur chaque barre</span></span>
+      <span style="background:rgba(29,158,117,0.15);border:0.5px solid rgba(29,158,117,0.35);border-radius:20px;padding:6px 14px;font-size:11px;font-weight:500;color:#5DCAA5;"><span class="ei">✓ Bilingual label — FR/EN</span><span class="fi">✓ Étiquette bilingue — FR/EN</span></span>
+      <span style="background:rgba(29,158,117,0.15);border:0.5px solid rgba(29,158,117,0.35);border-radius:20px;padding:6px 14px;font-size:11px;font-weight:500;color:#5DCAA5;"><span class="ei">✓ No artificial colours</span><span class="fi">✓ Sans colorants artificiels</span></span>
+    </div>
+  </div>
+
+</div>
+
+<div style="height:0.5px;background:rgba(250,238,218,0.08);margin:0 40px;"></div>
 
 <!-- VS -->
 <div class="section-sm">
@@ -449,6 +561,49 @@ footer{padding:28px 64px;border-top:0.5px solid rgba(250,238,218,0.06);display:f
   </div>
 </div>
 
+
+<div style="height:0.5px;background:rgba(250,238,218,0.08);margin:0 40px;"></div>
+
+<!-- FAQ SECTION -->
+<div style="padding:64px 40px;max-width:700px;margin:0 auto;">
+  <p class="sec-label"><span class="ei">Common questions</span><span class="fi">Questions fréquentes</span></p>
+  <h2 style="font-family:var(--font-serif);font-size:28px;color:var(--color-text-primary);margin-bottom:24px;font-weight:500;"><span class="ei">Everything you need to know</span><span class="fi">Tout ce que vous devez savoir</span></h2>
+
+  <div style="display:flex;flex-direction:column;gap:2px;" id="faq">
+
+    <div class="faq-item" onclick="toggleFaq(0)">
+      <div class="faq-q"><span class="ei">When will I receive my order?</span><span class="fi">Quand vais-je recevoir ma commande?</span><span class="faq-arrow">↓</span></div>
+      <div class="faq-a" id="faq-0"><span class="ei">Sol is a pre-order product launching in approximately 60 days. Once your order is placed you'll receive a confirmation email. When the bars are manufactured and ready to ship you'll receive tracking information. Pre-orders ship before any general release.</span><span class="fi">Sol est un produit en précommande qui sera lancé dans environ 60 jours. Une fois votre commande passée, vous recevrez un email de confirmation. Quand les barres sont prêtes, vous recevrez les informations de suivi.</span></div>
+    </div>
+
+    <div class="faq-item" onclick="toggleFaq(1)">
+      <div class="faq-q"><span class="ei">Can I get a refund if I change my mind?</span><span class="fi">Puis-je être remboursé si je change d'avis?</span><span class="faq-arrow">↓</span></div>
+      <div class="faq-a" id="faq-1"><span class="ei">Yes. If Sol doesn't meet your expectations when it arrives, contact us at hello@solnutrition.ca and we'll make it right. We stand behind the product completely.</span><span class="fi">Oui. Si Sol ne répond pas à vos attentes à la réception, contactez-nous à hello@solnutrition.ca et nous arrangerons cela. Nous défendons le produit complètement.</span></div>
+    </div>
+
+    <div class="faq-item" onclick="toggleFaq(2)">
+      <div class="faq-q"><span class="ei">Is the bar actually gluten free?</span><span class="fi">La barre est-elle vraiment sans gluten?</span><span class="faq-arrow">↓</span></div>
+      <div class="faq-a" id="faq-2"><span class="ei">All 8 Sol ingredients are naturally gluten-free. We verify with our co-packer that there is no cross-contamination risk from gluten-containing products in the facility before making this claim officially on the label.</span><span class="fi">Les 8 ingrédients de Sol sont naturellement sans gluten. Nous vérifions avec notre co-fabricant qu'il n'y a pas de risque de contamination croisée avant de faire cette affirmation officiellement sur l'étiquette.</span></div>
+    </div>
+
+    <div class="faq-item" onclick="toggleFaq(3)">
+      <div class="faq-q"><span class="ei">How is Sol different from RXBar?</span><span class="fi">En quoi Sol est-il différent d'un RXBar?</span><span class="faq-arrow">↓</span></div>
+      <div class="faq-a" id="faq-3"><span class="ei">RXBar uses egg whites for protein — not vegan. Sol uses hemp protein and spirulina — 100% plant-based. RXBar has 12g protein. Sol has 18g. RXBar uses "natural flavours" as an ingredient. Sol has none. Both have clean labels — Sol goes further.</span><span class="fi">RXBar utilise des blancs d'œufs — pas végétalien. Sol utilise la protéine de chanvre et la spiruline — 100% végétal. RXBar a 12g de protéines. Sol en a 18g. RXBar utilise des "arômes naturels". Sol n'en a aucun.</span></div>
+    </div>
+
+    <div class="faq-item" onclick="toggleFaq(4)">
+      <div class="faq-q"><span class="ei">What does it taste like?</span><span class="fi">Quel est le goût?</span><span class="faq-arrow">↓</span></div>
+      <div class="faq-a" id="faq-4"><span class="ei">Rich dark chocolate from the raw cacao, natural sweetness from the medjool dates, and a slightly earthy depth from the spirulina and chlorella — all balanced by the almond butter. Think of a premium dark chocolate energy ball in bar form. Dense, satisfying, real food taste. Not sweet like a candy bar.</span><span class="fi">Chocolat noir riche du cacao cru, douceur naturelle des dattes Medjool, et une profondeur légèrement terreuse de la spiruline et de la chlorelle — équilibrée par le beurre d'amande. Dense, satisfaisant, goût de vraie nourriture.</span></div>
+    </div>
+
+    <div class="faq-item" onclick="toggleFaq(5)">
+      <div class="faq-q"><span class="ei">Do you ship across Canada?</span><span class="fi">Livrez-vous partout au Canada?</span><span class="faq-arrow">↓</span></div>
+      <div class="faq-a" id="faq-5"><span class="ei">Yes. Sol ships across Canada. Montreal and Quebec orders ship first as our home market. National shipping follows. Exact shipping costs are calculated at checkout via Stripe.</span><span class="fi">Oui. Sol expédie partout au Canada. Les commandes de Montréal et du Québec sont expédiées en premier. Les coûts d'expédition exacts sont calculés lors du paiement via Stripe.</span></div>
+    </div>
+
+  </div>
+</div>
+
 <footer>
   <span class="footer-logo">SOL</span>
   <span class="footer-copy"><span class="ei">Made in Montreal, Quebec · solnutrition.ca</span><span class="fi">Fait à Montréal, Québec · solnutrition.ca</span></span>
@@ -501,7 +656,7 @@ let currentIng = 0;
 const ings = {
   en:[
     {t:'Hemp protein',p:'A complete plant protein with all essential amino acids. Hemp is easier to digest than whey, contains omega-3 and omega-6 fatty acids, and causes zero gut issues. The backbone of Sol\'s 18g protein per bar.'},
-    {t:'Spirulina',p:'One of the most nutrient-dense foods on earth. Spirulina adds plant protein, iron, B vitamins, and powerful antioxidants. The ingredient that separates Sol from every other bar on the shelf.'},
+    {t:'Spirulina',p:'One of the most protein-dense foods on earth — 65% protein by weight with 95% bioavailability. Sol uses 6g of spirulina per bar, delivering nearly 4g of complete plant protein plus iron, B vitamins, and powerful antioxidants. The ingredient that separates Sol from every other bar on the shelf.'},
     {t:'Medjool dates',p:'Nature\'s binder and sweetener in one. Medjool dates hold the bar together without glycerin or tapioca syrup. They bring natural sugar, fibre, potassium and magnesium — no processing required.'},
     {t:'Raw cacao',p:'Not cocoa powder — raw cacao. Cold-pressed from the cacao bean, retaining all flavanols, magnesium, and antioxidants that processing destroys. The deepest, most honest chocolate flavour possible.'},
     {t:'Almond butter',p:'Monounsaturated fats, vitamin E, and magnesium. Almond butter gives Sol its texture and satiety. Healthy fat that keeps you full. No added oils, no emulsifiers. Just ground almonds.'},
@@ -510,7 +665,7 @@ const ings = {
     {t:'Chlorella',p:'The most chlorophyll-rich food on earth. Chlorella supports detoxification, binds to heavy metals, and contains CGF — a unique growth factor that supports cellular repair. Paired with spirulina, it creates an elite green superfood stack found in no other bar in Canada. Always sourced as broken cell wall chlorella.'}
   ],
   fr:[
-    {t:'Protéine de chanvre',p:'Une protéine végétale complète avec tous les acides aminés essentiels. Plus facile à digérer que le lactosérum, riche en oméga-3 et oméga-6. La base des 18g de protéines par barre Sol.'},
+    {t:'Protéine de chanvre',p:'Sol utilise de la protéine de chanvre concentrée à 70% — la qualité la plus élevée disponible. À 70% de protéines par poids, 20g de chanvre fournissent 14g de protéines par barre. Profil complet d'acides aminés, digestibilité à 95%.'},
     {t:'Spiruline',p:'L\'un des aliments les plus riches en nutriments sur terre. La spiruline apporte protéines végétales, fer, vitamines B et antioxydants. L\'ingrédient qui distingue Sol de toutes les autres barres.'},
     {t:'Dattes Medjool',p:'Le liant et l\'édulcorant naturel en un. Les dattes Medjool tiennent la barre sans glycérine ni sirop de tapioca. Sucre naturel, fibres, potassium et magnésium — sans transformation.'},
     {t:'Cacao cru',p:'Pas de la poudre de cacao — du cacao cru. Pressé à froid, conservant tous les flavanols, magnésium et antioxydants que la transformation détruit. La saveur chocolatée la plus honnête possible.'},
@@ -528,6 +683,21 @@ function showIng(i) {
   document.getElementById('ing-text').textContent = ings[l][i].p;
 }
 showIng(0);
+
+// FAQ
+function toggleFaq(i) {
+  const a = document.getElementById('faq-' + i);
+  const items = document.querySelectorAll('.faq-item');
+  const arrows = document.querySelectorAll('.faq-arrow');
+  const isOpen = a.classList.contains('open');
+  document.querySelectorAll('.faq-a').forEach(el => el.classList.remove('open'));
+  arrows.forEach(el => el.classList.remove('open'));
+  if (!isOpen) {
+    a.classList.add('open');
+    items[i].querySelector('.faq-arrow').classList.add('open');
+  }
+}
+
 </script>
 </body>
 </html>
